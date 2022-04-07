@@ -2,27 +2,29 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo logo" href="/">
-        <svg class="main-header__img-mobile logo__mobile" width="96" height="15">
-          <use xlink:href="img/sprite.svg#logo-mobile"></use>
-        </svg>
-        <svg class="main-header__img-full logo__full" width="200" height="50">
-          <use xlink:href="img/sprite.svg#logo-full"></use>
+
+    <header class="header">
+      <a class="header__logo logo" href="/">
+        <svg class="logo__img">
+          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
         </svg>
         <span class="visually-hidden">Погнали?</span>
       </a>
 
-      <nav class="main-header__nav main-nav">
-        <ul class="main-nav__list">
+      <nav class="header__nav">
+        <ul class="main-nav">
           <li class="main-nav__item">
             <a class="main-nav__link" href="about.html">О сервисе</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="directions.html">Направления</a>
+            <a class="main-nav__link" href="profile.html">Направления</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="companions.html">Попутчики</a>
@@ -30,32 +32,34 @@
         </ul>
       </nav>
 
-      <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
 
-      <div class="main-header__toolbar toolbar-list">
-        <a class="toolbar-list__call button" href="tel:88005558628">
-          <svg class="toolbar-list__icon" width="16" height="16">
+      <div class="header__toolbar toolbar">
+        <a class="toolbar__call button" href="tel:88005558628">
+          <svg class="toolbar__icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#icon-call"></use>
           </svg>
           <span class="visually-hidden">8 800 555-86-28</span>
         </a>
-        <a class="toolbar-list__mail button" href="mailto:mail@htmlacademy.ru">
-          <svg class="toolbar-list__icon" width="15" height="12">
+        <a class="toolbar__mail button" href="mailto:mail@htmlacademy.ru">
+          <svg class="toolbar__icon" width="15" height="12">
             <use xlink:href="img/sprite.svg#icon-mail"></use>
           </svg>
           <span class="visually-hidden">mail@htmlacademy.ru</span>
         </a>
-        <a class="toolbar-list__login button" href="login.html">Авторизация</a>
+        <a class="toolbar__login button" href="login.html">Авторизация</a>
       </div>
 
-      <div class="main-header__mobile mobile-menu">
+      <div class="header__mobile mobile-menu">
         <nav class="mobile-menu__nav mobile-nav">
           <ul class="mobile-nav__list"></ul>
             <li class="mobile-nav__item">
               <a class="mobile-nav__link" href="about.html">О сервисе</a>
             </li>
             <li class="mobile-nav__item">
-              <a class="mobile-nav__link" href="directions.html">Направления</a>
+              <a class="mobile-nav__link" href="profile.html">Направления</a>
             </li>
             <li class="mobile-nav__item">
               <a class="mobile-nav__link" href="companions.html">Попутчики</a>
@@ -108,12 +112,30 @@
     <main class="main">
       <section class="promo">
         <div class="container">
-          <h1 class="promo__title">В путешествие с крутыми попутчиками!</h1>
+          <h1 class="promo__title">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h1>
 
           <blockquote class="promo__quote promo-quote">
             <p class="promo-quote__text">«Лучшее приложение, что я видел в жизни!»</p>
             <cite class="promo-quote__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
           </blockquote>
+
+          <img src="img/traveller.png" alt="Путешествиник">
+
+          <div class="promo__toolbar toolbar">
+            <a class="toolbar__call button" href="tel:88005558628">
+              <svg class="toolbar__icon" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-call"></use>
+              </svg>
+              <span class="visually-hidden">8 800 555-86-28</span>
+            </a>
+            <a class="toolbar__mail button" href="mailto:mail@htmlacademy.ru">
+              <svg class="toolbar__icon" width="15" height="12">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            </a>
+            <a class="toolbar__login button" href="login.html">Авторизация</a>
+          </div>
 
           <ul class="promo__steps promo-steps">
             <li class="promo-steps__item promo-steps__item--first">
@@ -145,9 +167,6 @@
 
           <a class="button button--large button--yellow button--arrow-right" href="#">
             <span class="button__text">Подробнее</span>
-            <svg class="button__icon">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
           </a>
         </div>
       </section>
@@ -390,25 +409,19 @@
         </div>
 
         <button class="profile__button-biz button-biz" type="button">
-          <svg class="button-biz__icon">
-            <use xlink:href="#icon-biz"></use>
-          </svg>
           Показать тарифы для бизнеса
         </button>
       </section>
 
       <section class="feedback">
         <div class="container">
-          <h2 class="feedback__heiding">Заинтересовались?</h2>
+          <h2 class="feedback__titile">Заинтересовались?</h2>
           <p class="feedback__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
 
           <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="feedback-form__input" type="text" placeholder="E-mail">
             <button class="feedback-form__submit feedback-submit" type="submit">
               <span class="feedback-submit__text">Регистрация</span>
-              <svg class="feedback-submit__icon">
-                <use xlink:href="#icon-arrow-right"></use>
-              </svg>
             </button>
           </form>
 
@@ -451,16 +464,15 @@
       </section>
 
       <section class="map">
-        <!-- код яндекс карт -->
+        яндекс карта
       </section>
     </main>
+
     <footer class="footer">
       <a class="footer__logo logo" href="/">
-        <svg class="logo__mobile" width="96" height="15">
-          <use xlink:href="img/sprite.svg#logo-mobile"></use>
-        </svg>
-        <svg class="logo__full" width="200" height="50">
-          <use xlink:href="img/sprite.svg#logo-full"></use>
+        <svg class="logo__img">
+          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
         </svg>
         <span class="visually-hidden">Погнали?</span>
       </a>
@@ -491,9 +503,7 @@
       <div class="footer__creator creator">
         <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
           <p class="creator__text">Разработано</p>
-          <svg class="creator__logo">
-            <use xlink:href="#logo-htmlacademy"></use>
-          </svg>
+          <img src="img/htmlacademy.svg" alt="htmlacademy" width="50">
         </a>
       </div>
     </footer>
