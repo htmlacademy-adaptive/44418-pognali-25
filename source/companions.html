@@ -2,27 +2,28 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Погнали - Попутчики</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo logo" href="/">
-        <svg class="main-header__img-mobile logo__mobile" width="96" height="15">
-          <use xlink:href="img/sprite.svg#logo-mobile"></use>
-        </svg>
-        <svg class="main-header__img-full logo__full" width="200" height="50">
-          <use xlink:href="img/sprite.svg#logo-full"></use>
+    <header class="header">
+      <a class="header__logo logo" href="/">
+        <svg class="logo__img">
+          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
         </svg>
         <span class="visually-hidden">Погнали?</span>
       </a>
 
-      <nav class="main-header__nav main-nav">
-        <ul class="main-nav__list">
+      <nav class="header__nav">
+        <ul class="main-nav">
           <li class="main-nav__item">
             <a class="main-nav__link" href="about.html">О сервисе</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="countries.html">Направления</a>
+            <a class="main-nav__link" href="profile.html">Направления</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="companions.html">Попутчики</a>
@@ -30,25 +31,27 @@
         </ul>
       </nav>
 
-      <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
 
-      <div class="main-header__toolbar toolbar-list">
-        <a class="toolbar-list__call button" href="tel:88005558628">
-          <svg class="toolbar-list__icon" width="16" height="16">
+      <div class="header__toolbar toolbar">
+        <a class="toolbar__call button" href="tel:88005558628">
+          <svg class="toolbar__icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#icon-call"></use>
           </svg>
           <span class="visually-hidden">8 800 555-86-28</span>
         </a>
-        <a class="toolbar-list__mail button" href="mailto:mail@htmlacademy.ru">
-          <svg class="toolbar-list__icon" width="15" height="12">
+        <a class="toolbar__mail button" href="mailto:mail@htmlacademy.ru">
+          <svg class="toolbar__icon" width="15" height="12">
             <use xlink:href="img/sprite.svg#icon-mail"></use>
           </svg>
           <span class="visually-hidden">mail@htmlacademy.ru</span>
         </a>
-        <a class="toolbar-list__login button" href="login.html">Авторизация</a>
+        <a class="toolbar__login button" href="login.html">Авторизация</a>
       </div>
 
-      <div class="main-header__mobile mobile-menu">
+      <div class="header__mobile mobile-menu">
         <nav class="mobile-menu__nav mobile-nav">
           <ul class="mobile-nav__list"></ul>
             <li class="mobile-nav__item">
@@ -112,14 +115,11 @@
 
           <a class="main__link-index link-index" href="/">
             <span class="link-index__text">На главную</span>
-            <svg class="link-index__icon">
-              <use xlink:href="#icon-link-index"></use>
-            </svg>
           </a>
         </div>
       </header>
 
-      <div class="location-filter">
+      <section class="location-filter">
         <div class="container">
           <h2 class="location-filter__title">
             <svg class="location-filter__icon" width="23" height="15">
@@ -272,241 +272,243 @@
           </svg>
           Свернуть
         </button>
-      </div>
+      </section>
 
       <section class="companions">
-        <h2 class="visually-hidden">Каталог попутчиков</h2>
+        <div class="container">
+          <h2 class="visually-hidden">Каталог попутчиков</h2>
 
-        <aside class="companions__filter companions-filter">
-          <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
+          <aside class="companions__filter companions-filter">
+            <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
 
-          <form class="companions-filter__form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Хобби</legend>
-              <div class="companions-filter__wrap">
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="gym">
-                  <span class="field__label">Спортзал</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="hookah">
-                  <span class="field__label">Кальян</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="sofa">
-                  <span class="field__label">Диван</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Музыка</legend>
-              <div class="companions-filter__wrap">
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="hard-rock">
-                  <span class="field__label">Тяжелый рок</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="russian-rap">
-                  <span class="field__label">Русский рэп</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="eurodens">
-                  <span class="field__label">Евроденс</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Еда</legend>
-              <div class="companions-filter__wrap">
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="meat-eater">
-                  <span class="field__label">Мясоед</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="sitting-pp">
-                  <span class="field__label">Сидит на ПП</span>
-                </label>
-                <label class="companions-filter__field field">
-                  <input class="field__control checkbox" type="checkbox" name="vegan-raw">
-                  <span class="field__label">Веган-сыроед</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Транспорт</legend>
-              <div class="companions-filter__wrap">
-                <label class="companions-filter__field field-icon">
-                  <svg class="field-icon__icon">
-                    <use xlink:href="#icon-plane"></use>
-                  </svg>
-                  <span class="visually-hidden">Авиаперелет</span>
-                  <input class="visually-hidden" type="checkbox" name="plane">
-                </label>
-                <label class="companions-filter__field field-icon">
-                  <svg class="field-icon__icon">
-                    <use xlink:href="#icon-car"></use>
-                  </svg>
-                  <span class="visually-hidden">Автотранспорт</span>
-                  <input class="visually-hidden" type="checkbox" name="car">
-                </label>
-                <label class="companions-filter__field field-icon">
-                  <svg class="field-icon__icon">
-                    <use xlink:href="#icon-bicycle"></use>
-                  </svg>
-                  <span class="visually-hidden">Велосипед</span>
-                  <input class="visually-hidden" type="checkbox" name="bicycle">
-                </label>
-                <label class="companions-filter__field field-icon">
-                  <svg class="field-icon__icon">
-                    <use xlink:href="#icon-walk"></use>
-                  </svg>
-                  <span class="visually-hidden">Пешком</span>
-                  <input class="visually-hidden" type="checkbox" name="walk">
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Левел</legend>
-              <div class="companions-filter__wrap">
-                <input class="companions-filter__control input" type="number" name="level-min">
-                <input class="companions-filter__control input" type="number" name="level-max">
-                <div class="companions-filter__track">
-                  <input class="companions-filter__range" name="range-level-min" type="range" min="0" max="100"
-                  value="30">
-                  <input class="companions-filter__range" name="range-level-max" type="range" min="0" max="100"
-                  value="100">
+            <form class="companions-filter__form" action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="companions-filter__fieldset">
+                <legend class="companions-filter__legend">Хобби</legend>
+                <div class="companions-filter__wrap">
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="gym">
+                    <span class="field__label">Спортзал</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="hookah">
+                    <span class="field__label">Кальян</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="sofa">
+                    <span class="field__label">Диван</span>
+                  </label>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <button class="companions-filter__submit" type="submit">Показать</button>
-          </form>
-        </aside>
+              <fieldset class="companions-filter__fieldset">
+                <legend class="companions-filter__legend">Музыка</legend>
+                <div class="companions-filter__wrap">
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="hard-rock">
+                    <span class="field__label">Тяжелый рок</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="russian-rap">
+                    <span class="field__label">Русский рэп</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="eurodens">
+                    <span class="field__label">Евроденс</span>
+                  </label>
+                </div>
+              </fieldset>
 
-        <ul class="companions__list">
-          <li class="companions__item">
-            <div class="companion-card">
-              <img class="companion-card__img" src="" alt="Таня Фирсова">
+              <fieldset class="companions-filter__fieldset">
+                <legend class="companions-filter__legend">Еда</legend>
+                <div class="companions-filter__wrap">
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="meat-eater">
+                    <span class="field__label">Мясоед</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="sitting-pp">
+                    <span class="field__label">Сидит на ПП</span>
+                  </label>
+                  <label class="companions-filter__field field">
+                    <input class="field__control checkbox" type="checkbox" name="vegan-raw">
+                    <span class="field__label">Веган-сыроед</span>
+                  </label>
+                </div>
+              </fieldset>
 
-              <h3 class="companion-card__title">Таня Фирсова</h3>
-
-              <div class="companion-card__status">
-                <span class="visually-hidden">Статус</span>
-              </div>
-
-              <div class="companion-card__like">
-                <button class="companion-card__like-button" type="button">
-                  <svg class="companion-card__like-icon" width="12" height="12">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
-                  </svg>
-                </button>
-                <span class="companion-card__like-count">1,5 М</span>
-              </div>
-
-              <p class="companion-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-
-              <div class="companion-card__flags companion-flags">
-                <h4 class="companion-flags__title">Хочу посетить:</h4>
-                <ul class="companion-flags__list">
-                  <li class="companion-flags__item">
-                    <img class="companion-flags__img" src="" alt="Шри-Ланка">
-                    Шри-Ланка
-                  </li>
-                  <li class="companion-flags__item">
-                    <img class="companion-flags__img" src="" alt="Таиланд">
-                    Таиланд
-                  </li>
-                  <li class="companion-flags__item">
-                    <img class="companion-flags__img" src="" alt="Сейшелы">
-                    Сейшелы
-                  </li>
-                </ul>
-              </div>
-
-              <div class="companion-card__transport companion-transport">
-                <h4 class="companion-transport__title">Транспорт:</h4>
-                <ul class="companion-transport__list">
-                  <li class="companion-transport__item">
-                    <svg class="companion-transport__icon companion-transport__icon--active">
+              <fieldset class="companions-filter__fieldset">
+                <legend class="companions-filter__legend">Транспорт</legend>
+                <div class="companions-filter__wrap">
+                  <label class="companions-filter__field field-icon">
+                    <svg class="field-icon__icon">
                       <use xlink:href="#icon-plane"></use>
                     </svg>
-                    <div class="companion-transport__tooltip tooltip">Авиаперелет</div>
-                  </li>
-                  <li>
-                    <svg class="companion-transport__icon">
+                    <span class="visually-hidden">Авиаперелет</span>
+                    <input class="visually-hidden" type="checkbox" name="plane">
+                  </label>
+                  <label class="companions-filter__field field-icon">
+                    <svg class="field-icon__icon">
                       <use xlink:href="#icon-car"></use>
                     </svg>
-                    <div class="companion-transport__tooltip tooltip">Автотранспорт</div>
-                  </li>
-                  <li>
-                    <svg class="companion-transport__icon">
+                    <span class="visually-hidden">Автотранспорт</span>
+                    <input class="visually-hidden" type="checkbox" name="car">
+                  </label>
+                  <label class="companions-filter__field field-icon">
+                    <svg class="field-icon__icon">
                       <use xlink:href="#icon-bicycle"></use>
                     </svg>
-                    <div class="companion-transport__tooltip tooltip">Велосипед</div>
-                  </li>
-                  <li>
-                    <svg class="companion-transport__icon">
+                    <span class="visually-hidden">Велосипед</span>
+                    <input class="visually-hidden" type="checkbox" name="bicycle">
+                  </label>
+                  <label class="companions-filter__field field-icon">
+                    <svg class="field-icon__icon">
                       <use xlink:href="#icon-walk"></use>
                     </svg>
-                    <div class="companion-transport__tooltip tooltip">Пешком</div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="companion-card__level companion-level">
-                <h4 class="companion-level__title">Левел:</h4>
-                <div class="companion-level__label level-label">
-                  <b class="level-label__count">80</b>
-                  <p class="level-label__text">level</p>
-                  <span class="level-label__track"></span>
+                    <span class="visually-hidden">Пешком</span>
+                    <input class="visually-hidden" type="checkbox" name="walk">
+                  </label>
                 </div>
+              </fieldset>
+
+              <fieldset class="companions-filter__fieldset">
+                <legend class="companions-filter__legend">Левел</legend>
+                <div class="companions-filter__wrap">
+                  <input class="companions-filter__control input" type="number" name="level-min">
+                  <input class="companions-filter__control input" type="number" name="level-max">
+                  <div class="companions-filter__track">
+                    <input class="companions-filter__range" name="range-level-min" type="range" min="0" max="100"
+                    value="30">
+                    <input class="companions-filter__range" name="range-level-max" type="range" min="0" max="100"
+                    value="100">
+                  </div>
+                </div>
+              </fieldset>
+
+              <button class="companions-filter__submit" type="submit">Показать</button>
+            </form>
+          </aside>
+
+          <ul class="companions__list">
+            <li class="companions__item">
+              <div class="companion-card">
+                <img class="companion-card__img" src="" alt="Таня Фирсова">
+
+                <h3 class="companion-card__title">Таня Фирсова</h3>
+
+                <div class="companion-card__status">
+                  <span class="visually-hidden">Статус</span>
+                </div>
+
+                <div class="companion-card__like">
+                  <button class="companion-card__like-button" type="button">
+                    <svg class="companion-card__like-icon" width="12" height="12">
+                      <use xlink:href="img/sprite.svg#icon-like"></use>
+                    </svg>
+                  </button>
+                  <span class="companion-card__like-count">1,5 М</span>
+                </div>
+
+                <p class="companion-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+                <div class="companion-card__flags companion-flags">
+                  <h4 class="companion-flags__title">Хочу посетить:</h4>
+                  <ul class="companion-flags__list">
+                    <li class="companion-flags__item">
+                      <img class="companion-flags__img" src="" alt="Шри-Ланка">
+                      Шри-Ланка
+                    </li>
+                    <li class="companion-flags__item">
+                      <img class="companion-flags__img" src="" alt="Таиланд">
+                      Таиланд
+                    </li>
+                    <li class="companion-flags__item">
+                      <img class="companion-flags__img" src="" alt="Сейшелы">
+                      Сейшелы
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="companion-card__transport companion-transport">
+                  <h4 class="companion-transport__title">Транспорт:</h4>
+                  <ul class="companion-transport__list">
+                    <li class="companion-transport__item">
+                      <svg class="companion-transport__icon companion-transport__icon--active">
+                        <use xlink:href="#icon-plane"></use>
+                      </svg>
+                      <div class="companion-transport__tooltip tooltip">Авиаперелет</div>
+                    </li>
+                    <li>
+                      <svg class="companion-transport__icon">
+                        <use xlink:href="#icon-car"></use>
+                      </svg>
+                      <div class="companion-transport__tooltip tooltip">Автотранспорт</div>
+                    </li>
+                    <li>
+                      <svg class="companion-transport__icon">
+                        <use xlink:href="#icon-bicycle"></use>
+                      </svg>
+                      <div class="companion-transport__tooltip tooltip">Велосипед</div>
+                    </li>
+                    <li>
+                      <svg class="companion-transport__icon">
+                        <use xlink:href="#icon-walk"></use>
+                      </svg>
+                      <div class="companion-transport__tooltip tooltip">Пешком</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="companion-card__level companion-level">
+                  <h4 class="companion-level__title">Левел:</h4>
+                  <div class="companion-level__label level-label">
+                    <b class="level-label__count">80</b>
+                    <p class="level-label__text">level</p>
+                    <span class="level-label__track"></span>
+                  </div>
+                </div>
+
+                <button class="companion-card__button button" type="button">Позвать!</button>
               </div>
-
-              <button class="companion-card__button button" type="button">Позвать!</button>
-            </div>
-          </li>
-        </ul>
-
-        <button class="companions__show-more button button--more" type="button">
-          <svg class="button__icon" width="26" height="26">
-            <use xlink:href="img/sprite.svg#icon-plus"></use>
-          </svg>
-          Показать еще
-        </button>
-
-        <div class="companions__pagination">
-          <ul class="pagination">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--active" href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
             </li>
           </ul>
 
-          <div class="pagination-arrow">
-            <a class="pagination-arrow__prev" href="">
-              <svg class="pagination-arrow__icon" width="20" height="13">
-                <use xlink:href="img/sprite.svg#icon-triangle-left"></use>
-              </svg>
-              <span class="visually-hidden">Предыдущий</span>
-            </a>
-            <a class="pagination-arrow__next" href="">
-              <svg class="pagination-arrow__icon" width="20" height="13">
-                <use xlink:href="img/sprite.svg#icon-triangle-right"></use>
-              </svg>
-              <span class="visually-hidden">Следующий</span>
-            </a>
+          <button class="companions__show-more button button--more" type="button">
+            <svg class="button__icon" width="26" height="26">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            Показать еще
+          </button>
+
+          <div class="companions__pagination">
+            <ul class="pagination">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--active" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4</a>
+              </li>
+            </ul>
+
+            <div class="pagination-arrow">
+              <a class="pagination-arrow__prev" href="">
+                <svg class="pagination-arrow__icon" width="20" height="13">
+                  <use xlink:href="img/sprite.svg#icon-triangle-left"></use>
+                </svg>
+                <span class="visually-hidden">Предыдущий</span>
+              </a>
+              <a class="pagination-arrow__next" href="">
+                <svg class="pagination-arrow__icon" width="20" height="13">
+                  <use xlink:href="img/sprite.svg#icon-triangle-right"></use>
+                </svg>
+                <span class="visually-hidden">Следующий</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -514,11 +516,9 @@
 
     <footer class="footer">
       <a class="footer__logo logo" href="/">
-        <svg class="logo__mobile" width="96" height="15">
-          <use xlink:href="img/sprite.svg#logo-mobile"></use>
-        </svg>
-        <svg class="logo__full" width="200" height="50">
-          <use xlink:href="img/sprite.svg#logo-full"></use>
+        <svg class="logo__img">
+          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
         </svg>
         <span class="visually-hidden">Погнали?</span>
       </a>
@@ -549,9 +549,7 @@
       <div class="footer__creator creator">
         <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
           <p class="creator__text">Разработано</p>
-          <svg class="creator__logo">
-            <use xlink:href="#logo-htmlacademy"></use>
-          </svg>
+          <img src="img/htmlacademy.svg" alt="htmlacademy" width="50">
         </a>
       </div>
     </footer>
