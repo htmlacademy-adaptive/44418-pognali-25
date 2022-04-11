@@ -1,6 +1,26 @@
 .map {
   background-color: #ff6347;
   margin-top: -30px;
-  padding-top: 101px;
-  padding-bottom: 100px;
+  // height: 322px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    // height: 584px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // height: 516px;
+  }
+}
+
+.map__iframe {
+  height: 322px;
+
+  @media (min-width: @tablet-width) {
+    height: 584px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 516px;
+  }
 }

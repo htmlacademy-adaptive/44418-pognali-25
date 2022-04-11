@@ -1,0 +1,211 @@
+.promo-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.promo-steps__item {
+  position: relative;
+  padding: 22px 24px 24px 24px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 33px 22px 33px;
+    border-radius: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 30px 34px 30px 34px;
+  }
+}
+
+.promo-steps__item--first {
+  background-color: @special-orange;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .promo-steps__text {
+    max-width: 106px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 141px;
+    }
+  }
+
+  .promo-steps__number {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 30px;
+      right: calc(75% + 34px);
+    }
+  }
+}
+
+.promo-steps__item--second {
+  background-color: #ffa530;
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .promo-steps__text {
+    max-width: 150px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 200px;
+    }
+  }
+
+  .promo-steps__number {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 30px;
+      right: calc(66% + 34px);
+    }
+  }
+}
+
+.promo-steps__item--third {
+  background-color: @special-yellow-dark;
+  grid-column: 1 / 2;
+  grid-row: 3 / -1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .promo-steps__text {
+    max-width: 138px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 183px;
+    }
+  }
+
+  .promo-steps__number {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 30px;
+      right: calc(50% + 34px);
+    }
+  }
+}
+
+.promo-steps__item--fourth {
+  background-color: @basic-yellow;
+  grid-column: 1 / 2;
+  grid-row: 4 / -1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .promo-steps__text {
+    max-width: 125px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 162px;
+    }
+  }
+
+  .promo-steps__number {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 30px;
+      right: 34px;
+    }
+  }
+}
+
+.promo-steps__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: @basic_blue;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.promo-steps__number {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    position: static;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 30px;
+  }
+}

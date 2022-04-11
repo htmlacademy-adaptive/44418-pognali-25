@@ -1,23 +1,106 @@
 .about {
-  background-color: #192144;
   color: #ffffff;
-  padding-top: 33px;
+  margin-top: -240px;
+  padding-top: 312px;
   padding-bottom: 82px;
+  background-color: #192144;
   background-image: url("../img/bg-about-mobile.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 320px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
   z-index: 6;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -140px;
+    padding-top: 278px;
+    padding-bottom: 88px;
+    background-color: #182044;
+    background-image: url("../img/bg-about-tablet.png");
+    background-size: 768px;
+    background-position: center calc(100% - 88px);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -60px;
+    padding-top: 192px;
+    padding-bottom: 163px;
+    background-color: #192144;
+    background-image: url("../img/bg-about-desktop.png");
+    background-size: 1440px;
+    background-position: center 100%;
+  }
+}
+
+.about__grid {
+  max-width: 211px;
+  padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 309px;
+    padding-left: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 619px;
+    padding-left: 70px;
+  }
 }
 
 .about__title {
   margin-top: 0;
-  color: var(--special-orange-color);
+  color: @special-orange;
   font-size: 24px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
-.about__text-accent {
-  font-weight: bold;
+.about__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+  }
+
+  &--bold {
+    font-weight: 700;
+    margin-top: 20px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+      margin-top: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 416px;
+      margin-top: 38px;
+    }
+  }
+}
+
+.about__button {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 85px;
+  }
 }

@@ -7,10 +7,123 @@
   border-bottom-right-radius: 30px;
   position: relative;
   z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -60px;
+    padding-top: 134px;
+    padding-bottom: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 167px;
+    padding-bottom: 138px;
+  }
+}
+
+.profile__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    grid-template-columns: 1fr auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 83px;
+    padding-left: 70px;
+    padding-right: 184px;
+    grid-template-columns: 1fr auto;
+  }
 }
 
 .profile__title {
-  margin-top: 0px;
-  color: var(--special-orange-color);
+  margin: 0;
+  color: @special-orange;
   font-size: 24px;
+  line-height: 1;
+  grid-column: 1 / 2;
+  align-self: center;
+  max-width: 107px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    font-size: 45px;
+    margin-bottom: 32px;
+    text-align: center;
+    max-width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 83px;
+  }
+}
+
+.profile__service {
+  grid-column: 1 / -1;
+  margin-top: 31px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    margin-top: 0;
+  }
+}
+
+.profile__price {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+    grid-column: 2 / 3;
+  }
+}
+
+.profile__img {
+  width: 100px;
+  height: 100px;
+
+  &--mobile {
+    grid-column: 2 / 3;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      top: calc(100% - 26px);
+      right: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 83px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -111px;
+      width: 198px;
+      height: 198px;
+    }
+  }
+}
+
+.profile__button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    justify-self: start;
+    margin-top: -12px;
+  }
 }
