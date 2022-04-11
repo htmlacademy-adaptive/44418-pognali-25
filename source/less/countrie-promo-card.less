@@ -1,0 +1,120 @@
+.countrie-promo-card {
+  display: grid;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 30%;
+  }
+}
+
+.countrie-promo-card__img {
+  width: 100%;
+  min-height: 110px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    min-height: 100%;
+  }
+}
+
+.countrie-promo-card__wrap {
+  background-color: #ffffff;
+  padding: 26px 24px 24px 24px;
+  border-radius: 10px;
+  margin-top: -10px;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 30px 26px 20px 26px;
+    margin-top: 0;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.countrie-promo-card__flag {
+  position: absolute;
+  top: -13px;
+  left: 24px;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    left: calc(100% - 34px);
+    width: 70px;
+    height: 47px;
+  }
+}
+
+.countrie-promo-card__title {
+  margin-top: 0;
+  color: #000000;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 2px;
+
+  @media (max-width: @mobile-width-only) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+}
+
+.countrie-promo-card__text {
+  margin: 0;
+  color: rgba(69, 69, 69, 0.3);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.12;
+
+  @media (max-width: @mobile-width-only) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.countrie-promo-card__user {
+  margin: 0;
+  color: rgba(22, 28, 53, 0.3);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+
+  @media (min-width: @tablet-width) {
+    line-height: 1;
+    font-size: 20px;
+  }
+}

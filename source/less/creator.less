@@ -1,0 +1,36 @@
+.creator {
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    padding-top: 13px;
+    margin-top: 37px;
+    border-top: 1px solid #f2f2f2;
+  }
+}
+
+.creator__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+  }
+}
+
+.creator__text {
+  margin: 0;
+  color: #444444;
+  font-size: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-right: 23px;
+  }
+}
+
+.creator__icon {
+  width: 27px;
+  height: 34px;
+}

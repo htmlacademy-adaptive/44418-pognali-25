@@ -1,11 +1,57 @@
 .location {
-  background-color: var(--basic-yellow-color);
+  background-color: @basic-yellow;
   color: #ffffff;
   margin-top: -30px;
-  padding-top: 101px;
+  padding-top: 61px;
   padding-bottom: 35px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -60px;
+    padding-top: 108px;
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 115px;
+    padding-bottom: 56px;
+  }
+}
+
+.location__grid {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 223px;
+    padding-right: 76px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.location__address {
+
+}
+
+.location__button {
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
