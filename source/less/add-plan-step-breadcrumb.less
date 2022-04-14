@@ -1,0 +1,35 @@
+.add-plan-step-breadcrumb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.add-plan-step-breadcrumb__item {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000000;
+  text-transform: uppercase;
+  position: relative;
+  opacity: .6;
+  padding-left: 36px;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #1D2E5B;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

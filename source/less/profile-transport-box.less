@@ -1,0 +1,50 @@
+.profile-transport-box {
+  position: relative;
+  border: 1px solid #CBCED9;
+  border-radius: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 26px;
+    min-width: 308px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    min-width: 384px;
+  }
+}
+
+.profile-transport-box__title {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #EDEFF6;
+  width: 111px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
+  color: #1D2E5B;
+  margin: 0;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 154px;
+    top: calc(100% - 8px);
+    color: #1D2E5B;
+  }
+}
+
+.profile-transport-box__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}

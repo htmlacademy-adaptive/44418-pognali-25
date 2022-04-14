@@ -1,0 +1,16 @@
+.location-toggle {
+
+  @media (min-width: @tablet-width) {
+    min-width: 185px;
+
+    &::before {
+      content: "Показать все";
+    }
+
+    &--open {
+      &::before {
+        content: "Свернуть";
+      }
+    }
+  }
+}
