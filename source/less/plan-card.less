@@ -1,0 +1,127 @@
+.plan-card {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 23px 25px;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 14px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 37px 42px 37px 43px;
+    grid-template-columns: 1fr 1fr auto;
+  }
+}
+
+.plan-card__header {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 32px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.plan-card__number {
+  margin-right: 5px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: #1D2E5B;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 36px;
+  }
+}
+
+.plan-card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  color: #1D2E5B;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+  }
+}
+
+.plan-card__content {
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 40px 0 40px;
+    border-top: 1px solid rgba(203, 206, 217, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.plan-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+
+.plan-card__item {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: #1D2E5B;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.plan-card__item:not(:last-child) {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.profile-plans__button {
+  margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 130px;
+  }
+}

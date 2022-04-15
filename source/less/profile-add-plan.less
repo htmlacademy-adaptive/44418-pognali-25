@@ -1,0 +1,67 @@
+.profile-add-plan {
+  background-color: #d4d9eb;
+  padding-top: 30px;
+  padding-bottom: 73px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -30px;
+
+  @media (min-width: @tablet-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding-top: 57px;
+    padding-bottom: 123px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 134px;
+  }
+}
+
+.profile-add-plan__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.profile-add-plan__title {
+  font-size: 24px;
+  line-height: 1;
+  color: #1D2E5B;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+  }
+}
+
+// .profile-add-plan__dotnav {
+//   grid-column: 2 / 3;
+//   align-self: center;
+// }
+
+.profile-add-plan__steps {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 55px;
+    gap: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 44px;
+  }
+}
