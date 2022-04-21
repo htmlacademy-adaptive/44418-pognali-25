@@ -48,11 +48,30 @@
 }
 
 .footer__logo {
-  .logo__img--mobile {
-    fill: #192144;
+  background-image: url("../img/logo-mobile-black.svg");
+  background-repeat: no-repeat;
+  background-size: 96px 15px;
+  width: 96px;
+  height: 15px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/logo-desktop-black.svg");
+    background-size: 166px 42px;
+    width: 166px;
+    height: 42px;
+    margin-bottom: 0;
   }
 
-  @media (max-width: @mobile-width-only) {
-    margin-bottom: 40px;
+  @media (min-width: @desktop-width) {
+    background-size: 200px 50px;
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.footer__social {
+  @media (min-width: @desktop-width) {
+    margin-left: -47px;
   }
 }
