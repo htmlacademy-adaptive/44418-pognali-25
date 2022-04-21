@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Погнали - Попутчики</title>
+    <link rel="stylesheet" href="css/style.css">
+    <base href="https://htmlacademy-adaptive.github.io/44418-pognali-25/7/">
+</head>
+  <body class="page__body">
+    <header class="header">
+      <a class="header__logo logo" href="/">
+        <svg class="logo__img" width="96" height="15">
+          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
+        </svg>
+        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Погнали?</span>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="main-nav">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">О сервисе</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="profile.html">Направления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="companions.html">Попутчики</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Открыть меню</span>
+        иконка
+      </button>
+
+      <div class="header__toolbar toolbar">
+        <a class="toolbar__call button" href="tel:88005558628">
+          иконка
+          <span class="visually-hidden" aria-hidden="true" tabindex="-1">8 800 555-86-28</span>
+        </a>
+        <a class="toolbar__mail button" href="mailto:mail@htmlacademy.ru">
+          иконка
+          <span class="visually-hidden" aria-hidden="true" tabindex="-1">емейл</span>
+        </a>
+        <a class="toolbar__login button" href="login.html">Авторизация</a>
+      </div>
+
+      <div class="header__mobile mobile-menu">
+        <nav class="mobile-menu__nav mobile-nav">
+          <ul class="mobile-nav__list"></ul>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="about.html">О сервисе</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="profile.html">Направления</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="companions.html">Попутчики</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="mobile-menu__login button" href="login.html">Авторизация</a>
+
+        <div class="mobile-menu__contacts">
+          <a class="link-icon" href="tel:88005558628">
+            8 800 555-86-28
+          </a>
+          <a class="link-icon" href="mailto:mail@htmlacademy.ru">
+            mail@htmlacademy.ru
+          </a>
+        </div>
+
+        <ul class="mobile-menu__social social">
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#" target="_blank">
+              иконка
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Facebook</span>
+            </a>
+            <a class="social__link social__link--vk" href="#" target="_blank">
+              иконка
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Вконтакте</span>
+            </a>
+            <a class="social__link social__link--instagram" href="#" target="_blank">
+              иконка
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main">
+      <header class="header-page">
+        <div class="container">
+          <div class="header-page__grid">
+            <h1 class="header-page__title">Попутчики</h1>
+
+            <a class="header-page__link-index" href="/">На главную</a>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- location-filter--open -->
+      <section class="location-filter">
+        <div class="container">
+          <div class="location-filter__grid">
+            <h2 class="location-filter__title">Фильтрация по странам:</h2>
+
+            <!-- location-toggle--open -->
+            <button class="location-filter__toggle location-toggle" type="button">
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Открыть фильтр</span>
+            </button>
+
+            <div class="location-filter__lands">
+              <ul class="location-filter-lands">
+                <li class="location-filter-lands__item location-filter-lands__item--active">
+                  <a class="location-filter-lands__link" href="#">Европа</a>
+                </li>
+                <li class="location-filter-lands__item">
+                  <a class="location-filter-lands__link" href="#">Азия</a>
+                </li>
+                <li class="location-filter-lands__item">
+                  <a class="location-filter-lands__link" href="#">Америка</a>
+                </li>
+                <li class="location-filter-lands__item">
+                  <a class="location-filter-lands__link" href="#">Остова</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="location-filter__letters">
+              <ul class="location-filter-letters">
+                <li class="location-filter-letters__item location-filter-letters__item--active">
+                  <a class="location-filter-letters__link" href="">А</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Б</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">В</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Г</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Д</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Е</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">З</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">И</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">К</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Л</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">М</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Н</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">О</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">П</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Р</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">С</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Т</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">У</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Ф</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Х</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Ч</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Ш</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Э</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Ю</a>
+                </li>
+                <li class="location-filter-letters__item">
+                  <a class="location-filter-letters__link" href="">Я</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="location-filter__country">
+              <ul class="location-filter-country">
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Австралия</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Австрия</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Азербайджан</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Албания</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Алжир</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Ангола</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Андорра</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Антигуа и Барбуда</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Аргентина</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Армения</a>
+                </li>
+                <li class="location-filter-country__item">
+                  <a class="location-filter-country__link" href="#">Афганистан</a>
+                </li>
+              </ul>
+            </div>
+
+
+            <button class="location-filter__button-close" type="button">Свернуть</button>
+          </div>
+          </div>
+
+      </section>
+
+      <section class="companions">
+        <div class="container">
+          <div class="companions__grid">
+            <h2 class="visually-hidden" aria-hidden="true" tabindex="-1">Каталог попутчиков</h2>
+
+            <aside class="companions__filter companions-filter">
+              <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
+
+              <form class="companions-filter__form" action="https://echo.htmlacademy.ru/" method="post">
+                <fieldset class="companions-filter__fieldset">
+                  <legend class="companions-filter__legend">Хобби</legend>
+                  <div class="companions-filter__wrap">
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="gym">
+                      <span class="field__label">Спортзал</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="hookah">
+                      <span class="field__label">Кальян</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="sofa">
+                      <span class="field__label">Диван</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="companions-filter__fieldset">
+                  <legend class="companions-filter__legend">Музыка</legend>
+                  <div class="companions-filter__wrap">
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="hard-rock">
+                      <span class="field__label">Тяжелый рок</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="russian-rap">
+                      <span class="field__label">Русский рэп</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="eurodens">
+                      <span class="field__label">Евроденс</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="companions-filter__fieldset">
+                  <legend class="companions-filter__legend">Еда</legend>
+                  <div class="companions-filter__wrap">
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="meat-eater">
+                      <span class="field__label">Мясоед</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="sitting-pp">
+                      <span class="field__label">Сидит на ПП</span>
+                    </label>
+                    <label class="companions-filter__field field">
+                      <input class="field__control checkbox" type="checkbox" name="vegan-raw">
+                      <span class="field__label">Веган-сыроед</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="companions-filter__fieldset">
+                  <legend class="companions-filter__legend">Транспорт</legend>
+                  <div class="companions-filter__wrap">
+                    <label class="companions-filter__field field-icon">
+                      x
+                      <span class="visually-hidden" aria-hidden="true" tabindex="-1">Авиаперелет</span>
+                      <input class="visually-hidden" aria-hidden="true" tabindex="-1" type="checkbox" name="plane">
+                    </label>
+                    <label class="companions-filter__field field-icon">
+                      x
+                      <span class="visually-hidden" aria-hidden="true" tabindex="-1">Автотранспорт</span>
+                      <input class="visually-hidden" aria-hidden="true" tabindex="-1" type="checkbox" name="car">
+                    </label>
+                    <label class="companions-filter__field field-icon">
+                      x
+                      <span class="visually-hidden" aria-hidden="true" tabindex="-1">Велосипед</span>
+                      <input class="visually-hidden" aria-hidden="true" tabindex="-1" type="checkbox" name="bicycle">
+                    </label>
+                    <label class="companions-filter__field field-icon">
+                      x
+                      <span class="visually-hidden" aria-hidden="true" tabindex="-1">Пешком</span>
+                      <input class="visually-hidden" aria-hidden="true" tabindex="-1" type="checkbox" name="walk">
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="companions-filter__fieldset">
+                  <legend class="companions-filter__legend">Левел</legend>
+                  <div class="companions-filter__wrap">
+                    <input class="companions-filter__control input" type="number" name="level-min">
+                    <input class="companions-filter__control input" type="number" name="level-max">
+                    <div class="companions-filter__progress">
+                      <input class="companions-filter__range" name="range-level-min" type="range" min="0" max="100"
+                      value="30">
+                      <input class="companions-filter__range" name="range-level-max" type="range" min="0" max="100"
+                      value="100">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <button class="companions-filter__submit" type="submit">Показать</button>
+              </form>
+            </aside>
+
+            <div class="companions__wrap">
+              <ul class="companions__list">
+                <li class="companions__item">
+                  <div class="companion-card companion-card--offline">
+
+                    <div class="companion-card__avatar">
+                      <img class="companion-card__img" src="img/foto.jpg" alt="Таня Фирсова">
+                    </div>
+
+                    <h3 class="companion-card__name">
+                      Таня
+                      <span class="companion-card__surname">Фирсова</span>
+                    </h3>
+
+                    <div class="companion-card__like companion-like">
+                      <button class="companion-like__button" type="button">x</button>
+                      <span class="companion-like__count">1,5 М</span>
+                    </div>
+
+                    <p class="companion-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+                    <div class="companion-card__countries companion-countries">
+                      <h4 class="companion-countries__title">Хочу посетить:</h4>
+                      <ul class="companion-countries__list">
+                        <li class="companion-countries__item">
+                          <img class="companion-countries__img" src="img/Thailand 1.png" alt="Шри-Ланка">
+                          Шри-Ланка
+                        </li>
+                        <li class="companion-countries__item">
+                          <img class="companion-countries__img" src="img/Thailand 1.png" alt="Таиланд">
+                          Таиланд
+                        </li>
+                        <li class="companion-countries__item">
+                          <img class="companion-countries__img" src="img/Thailand 1.png" alt="Сейшелы">
+                          Сейшелы
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="companion-card__transport companion-transport">
+                      <h4 class="companion-transport__title">Транспорт:</h4>
+                      <ul class="companion-transport__list">
+                        <li class="companion-transport__item">
+                          x
+                          <div class="companion-transport__tooltip tooltip">Авиаперелет</div>
+                        </li>
+                        <li>
+                          x
+                          <div class="companion-transport__tooltip tooltip">Автотранспорт</div>
+                        </li>
+                        <li>
+                          x
+                          <div class="companion-transport__tooltip tooltip">Велосипед</div>
+                        </li>
+                        <li>
+                          x
+                          <div class="companion-transport__tooltip tooltip">Пешком</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="companion-card__level companion-level">
+                      <h4 class="companion-level__title">Левел:</h4>
+                      <div class="companion-level__label level-label">
+                        <b class="level-label__count">80</b>
+                        <p class="level-label__text">level</p>
+                        <span class="level-label__progress"></span>
+                      </div>
+                    </div>
+
+                    <button class="companion-card__button button" type="button">Позвать!</button>
+                  </div>
+                </li>
+              </ul>
+
+              <button class="companions__show-more button" type="button">Показать еще</button>
+
+              <div class="companions__pagination">
+                <ul class="pagination">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active" href="#">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">4</a>
+                  </li>
+                </ul>
+
+                <div class="pagination-arrow">
+                  <a class="pagination-arrow__prev" href="">
+                    x
+                    <span class="visually-hidden" aria-hidden="true" tabindex="-1">Предыдущий</span>
+                  </a>
+                  <a class="pagination-arrow__next" href="">
+                    x
+                    <span class="visually-hidden" aria-hidden="true" tabindex="-1">Следующий</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <a class="footer__logo logo" href="/">
+            <svg class="logo__img">
+              <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
+              <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
+            </svg>
+            <span class="visually-hidden" aria-hidden="true" tabindex="-1">Погнали?</span>
+          </a>
+
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="#" target="_blank">
+                x
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Telegram</span>
+              </a>
+              <a class="social__link social__link--vk" href="#" target="_blank">
+                x
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Вконтакте</span>
+              </a>
+              <a class="social__link social__link--youtube" href="#" target="_blank">
+                x
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">YouTube</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__creator creator">
+            <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
+              <p class="creator__text">Разработано</p>
+              <img class="creator__icon" src="img/htmlacademy.svg" alt="htmlacademy" width="50">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
