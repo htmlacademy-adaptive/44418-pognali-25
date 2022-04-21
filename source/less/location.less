@@ -13,7 +13,7 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-top: -60px;
-    padding-top: 108px;
+    padding-top: 113px;
     padding-bottom: 84px;
   }
 
@@ -25,6 +25,7 @@
 
 .location__grid {
   display: flex;
+  align-items: stretch;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
@@ -37,11 +38,14 @@
     padding-right: 76px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .location__address {
-
+  @media (max-width: @mobile-width-only) {
+    max-width: 205px;
+  }
 }
 
 .location__button {

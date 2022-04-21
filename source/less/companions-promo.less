@@ -27,7 +27,7 @@
   @media (min-width: @desktop-width) {
     background-image: url("../img/bg-companions-promo-desktop.png");
     background-position: center 130px;
-    padding-top: 221px;
+    padding-top: 190px;
     padding-bottom: 138px;
   }
 }
@@ -41,13 +41,13 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 0 0 70px;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 630px;
     grid-template-rows: repeat(4, auto);
   }
 }
 
 .companions-promo__title {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 20px;
   padding-left: 25px;
   color: @special-orange;
@@ -57,7 +57,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 0;
     font-size: 45px;
-    margin-bottom: 57px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -71,10 +71,11 @@
   font-size: 16px;
   font-weight: 300;
   padding-left: 25px;
-  max-width: 217px;
+  max-width: 230px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
+    line-height: 1.2;
     padding-left: 0;
     max-width: 427px;
   }
@@ -86,18 +87,18 @@
 
   &--bold {
     font-weight: 700;
-    margin-top: 25px;
+    margin-top: 18px;
     margin-bottom: 54px;
 
     @media (min-width: @tablet-width) {
       font-size: 21px;
-      margin-top: 30px;
+      margin-top: 38px;
       margin-bottom: 59px;
     }
 
     @media (min-width: @desktop-width) {
       max-width: 416px;
-      margin-top: 38px;
+      margin-top: 35px;
       margin-bottom: 0;
       grid-column: 1 / 2;
       grid-row: 3 / 4;
@@ -121,7 +122,6 @@
     grid-column: 2 / 3;
     grid-row: 1 / -1;
     column-gap: 60px;
-
   }
 }
 
@@ -136,5 +136,7 @@
     margin-top: 85px;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    justify-self: start;
+    min-width: 280px;
   }
 }

@@ -1,0 +1,35 @@
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  &--orange {
+    background-color: #ff8d30;
+  }
+
+  &--yellow {
+    background-color: #ffbd30;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.icon-button__icon {
+  fill: #161c35;
+}
+
+.icon-button__icon--phone {
+  width: 16px;
+  height: 18px;
+}
+
+.icon-button__icon--mail {
+  width: 17px;
+  height: 14px;
+}

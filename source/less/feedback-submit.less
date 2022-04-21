@@ -1,0 +1,37 @@
+.feedback-submit {
+  width: 60px;
+  border-radius: 10px;
+  color: #1d2e5b;
+  fill: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 324px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.feedback-submit__text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.feedback-submit__icon {
+  width: 14px;
+  height: 16px;
+}
