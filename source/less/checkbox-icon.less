@@ -1,0 +1,87 @@
+.checkbox-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+
+    .checkbox-icon__icon {
+      fill: #b2b2b2;
+    }
+
+    .checkbox-icon__input:checked + .checkbox-icon__icon {
+      opacity: 0.7;
+    }
+  }
+}
+
+.checkbox-icon__input {
+  position: absolute;
+  appearance: none;
+  outline: none;
+}
+
+.checkbox-icon__icon {
+  fill: #d9d9d9;
+  transition: border-color 0.2s ease-in-out;
+
+  &--plane {
+    width: 15px;
+    height: 15px;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      height: 21px;
+    }
+  }
+
+  &--bus {
+    width: 15px;
+    height: 16px;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 21px;
+    }
+  }
+
+  &--bicycle {
+    width: 15px;
+    height: 12px;
+
+    @media (min-width: @tablet-width) {
+      width: 21px;
+      height: 17px;
+    }
+  }
+
+  &--run {
+    width: 13px;
+    height: 13px;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.checkbox-icon__input:checked + .checkbox-icon__icon {
+  fill: #1d2e5b;
+}
+
+.checkbox-icon__input:checked:disabled + .checkbox-icon__icon {
+  opacity: 0.3;
+}

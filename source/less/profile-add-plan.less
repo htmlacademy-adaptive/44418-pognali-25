@@ -1,19 +1,19 @@
 .profile-add-plan {
   background-color: #d4d9eb;
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 73px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
 
   @media (min-width: @tablet-width) {
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    padding-top: 57px;
+    padding-top: 52px;
     padding-bottom: 123px;
   }
 
   @media (min-width: @desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
     padding-top: 55px;
     padding-bottom: 134px;
   }
@@ -43,12 +43,20 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 69px;
+  }
 }
 
-// .profile-add-plan__dotnav {
-//   grid-column: 2 / 3;
-//   align-self: center;
-// }
+.profile-add-plan__dotnav {
+  align-self: center;
+  margin-right: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
 
 .profile-add-plan__steps {
   grid-column: 1 / -1;

@@ -2,12 +2,14 @@
   position: relative;
   width: 60px;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
   border-radius: 50%;
   text-align: center;
-  color: #ffffff;
-  padding-top: 11px;
   box-sizing: border-box;
+
+  &--bg {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .level-label__count {
@@ -18,6 +20,7 @@
   font-size: 24px;
   line-height: 1;
   font-weight: 700;
+  color: #161c35;
 }
 
 .level-label__text {
@@ -29,33 +32,79 @@
   font-size: 14px;
   line-height: 1;
   width: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(68, 68, 68, 0.3);
   padding-top: 3px;
+  color: #444444;
 }
 
-.level-label__progress {
+.level-label__svg {
   position: absolute;
   top: 0;
   left: 0;
+  transform: rotate(-90deg);
+}
+
+.level-label__circle {
+  fill: transparent;
+  stroke: #ff8d30;
+  stroke-width: 3;
 }
 
 .level-label--large {
   width: 100px;
   height: 100px;
-  background-color: transparent;
 
   .level-label__count {
-    color: #161c35;
     font-size: 38px;
     top: 19px;
   }
 
   .level-label__text {
     font-size: 18px;
-    color: #444444;
-    border-color: rgba(68, 68, 68, 0.3);
-    top: 57px;
+    top: 56px;
     width: 51px;
     padding-top: 7px;
+  }
+}
+
+.level-label--medium {
+  width: 95px;
+  height: 95px;
+
+  .level-label__count {
+    font-size: 38px;
+    top: 20px;
+  }
+
+  .level-label__text {
+    font-size: 18px;
+    top: 57px;
+    width: 48px;
+    padding-top: 6px;
+  }
+}
+
+.level-label--small {
+  width: 45px;
+  height: 45px;
+
+  .level-label__count {
+    font-size: 24px;
+    top: 13px;
+  }
+
+  .level-label__text {
+    display: none;
+  }
+}
+
+.level-label--light {
+  .level-label__count {
+    color: #ffffff;
+  }
+
+  .level-label__text {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
   }
 }

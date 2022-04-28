@@ -28,3 +28,19 @@
     display: none;
   }
 }
+
+.companion-level__label {
+  &--small {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--large {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.input-number {
+  height: 43px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: #959bb2;
+
+    .input-number__icon {
+      stroke: #959bb2;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 70px;
+  }
+}
+
+.input-number__input {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  color: #1d2e5b;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.input-number__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 14px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 20px;
+  }
+}
+
+.input-number__icon {
+  stroke: #cccccc;
+  transition: stroke 0.2s ease-in-out;
+
+  &--minus {
+    width: 14px;
+    height: 14px;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--plus {
+    width: 14px;
+    height: 14px;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

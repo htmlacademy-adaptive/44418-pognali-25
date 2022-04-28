@@ -1,0 +1,86 @@
+.transport-card {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.transport-card__item {
+  width: 32px;
+  height: 32px;
+  background-color: #edeff6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:last-child) {
+    margin-right: 1px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
+}
+
+.transport-card__item--active {
+  .transport-card__icon {
+    fill: #1d2e5b;
+  }
+}
+
+.transport-card__icon {
+  fill: #ced2df;
+}
+
+.transport-card__icon--plane {
+  width: 13px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.transport-card__icon--bus {
+  width: 13px;
+  height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 19px;
+    height: 20px;
+  }
+}
+
+.transport-card__icon--bicycle {
+  width: 13px;
+  height: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 19px;
+  }
+}
+
+.transport-card__icon--run {
+  width: 10px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 20px;
+  }
+}

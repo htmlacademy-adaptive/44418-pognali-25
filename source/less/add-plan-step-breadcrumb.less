@@ -12,13 +12,14 @@
   position: relative;
   opacity: 0.6;
   padding-left: 36px;
+  letter-spacing: 0.1em;
 
   &--active {
     opacity: 1;
   }
 
   &:not(:last-child) {
-    margin-bottom: 27px;
+    margin-bottom: 23px;
   }
 
   &::before {
@@ -31,5 +32,9 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 43px;
   }
 }

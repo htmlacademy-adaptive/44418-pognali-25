@@ -19,8 +19,17 @@
   &--active {
     opacity: 1;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .profile-add-plan-dotnav__item:not(:last-child) {
   margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
+  }
 }

@@ -8,7 +8,7 @@
   @media (min-width: @tablet-width) {
     margin-left: -35px;
     margin-right: -25px;
-    padding: 26px 37px 0 37px;
+    padding: 29px 37px 0 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,7 +32,7 @@
   left: 15px;
 
   @media (min-width: @tablet-width) {
-    left: 70px;
+    left: 74px;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,12 +62,34 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .companion-countries__item:not(:last-child) {
-  margin-right: 25px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 27px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
 }
 
 .companion-countries__img {
   margin-right: 14px;
+  width: 26px;
+  height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 11px;
+    width: 35px;
+    height: 24px;
+  }
 }

@@ -3,12 +3,62 @@
   align-items: center;
 }
 
+.companion-like--active {
+  .companion-like__button {
+    background-color: #f9eaea;
+
+    &::after {
+      opacity: 1;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 .25c2.763 0 5 2.194 5 4.9 0-2.706 2.238-4.9 5-4.9s5 2.194 5 4.9c0 4.079-4.043 5.518-9.51 12.01a.64.64 0 0 1-.98 0C4.043 10.668 0 9.229 0 5.15 0 2.444 2.237.25 5 .25Z' fill='%23F02323'/%3E%3C/svg%3E");
+    }
+
+    &:hover {
+      background-color: #f9d8d8;
+    }
+  }
+}
+
 .companion-like__button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #edeff6;
+  position: relative;
   margin-right: 6px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m10 7.124 1.117-2.348c.278-.582.76-1.418 1.44-2.095.67-.665 1.473-1.118 2.443-1.118 2.095 0 3.75 1.74 3.75 3.834 0 1.59-.692 2.712-2.335 4.424-.421.439-.901.912-1.432 1.435-1.386 1.365-3.108 3.064-4.983 5.336-1.875-2.272-3.598-3.97-4.982-5.336a74.167 74.167 0 0 1-1.433-1.435C1.942 8.11 1.25 6.987 1.25 5.397c0-2.093 1.655-3.834 3.75-3.834.97 0 1.772.453 2.442 1.118.682.677 1.163 1.513 1.44 2.095L10 7.124Zm.49 10.887a.645.645 0 0 1-.22.176.615.615 0 0 1-.76-.176c-2.001-2.497-3.813-4.283-5.304-5.752C1.625 9.713 0 8.113 0 5.397 0 2.554 2.237.25 5 .25c2 0 3.399 1.379 4.255 2.636.325.48.572.94.745 1.303.216-.454.465-.89.745-1.303C11.601 1.627 13 .25 15 .25c2.762 0 5 2.304 5 5.147 0 2.716-1.625 4.316-4.206 6.862-1.492 1.47-3.303 3.256-5.304 5.75v.002Z' fill='%23192144'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    opacity: 0.3;
+    transition: opacity 0.2s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      height: 18px;
+      background-size: 20px auto;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &:hover {
+    background-color: #e2e5f2;
+  }
 }
 
 .companion-like__count {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 700;
   color: #161c35;

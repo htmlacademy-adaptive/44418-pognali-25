@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
+    <!-- header--sticky header--open-modile -->
     <header class="header">
-      <a class="header__logo logo" href="/">
-        <svg class="logo__img" width="96" height="15">
-          <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
-          <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
-        </svg>
+      <a class="header__logo" href="/">
         <span class="visually-hidden" aria-hidden="true" tabindex="-1">Погнали?</span>
       </a>
 
@@ -31,26 +28,46 @@
         </ul>
       </nav>
 
-      <button class="header__toggle" type="button">
-        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Открыть меню</span>
-        иконка
+      <button class="header__toggle toggle-button" type="button">
+        <svg class="toggle-button__icon toggle-button__icon--open" width="25" height="11" viewBox="0 0 25 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="25" height="3" rx="1.5"/>
+          <rect y="8" width="25" height="3" rx="1.5"/>
+        </svg>
+
+        <svg class="toggle-button__icon toggle-button__icon--close" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="23.891" height="2.032" rx="1.016" transform="scale(.98435 1.01541) rotate(45 .335 4.13)"/>
+          <rect width="23.891" height="2.032" rx="1.016" transform="matrix(.69604 -.718 .69604 .718 .6 17.754)"/>
+        </svg>
+        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Открыть меню.</span>
       </button>
 
-      <div class="header__toolbar toolbar">
-        <a class="toolbar__call button" href="tel:88005558628">
-          иконка
-          <span class="visually-hidden" aria-hidden="true" tabindex="-1">8 800 555-86-28</span>
-        </a>
-        <a class="toolbar__mail button" href="mailto:mail@htmlacademy.ru">
-          иконка
-          <span class="visually-hidden" aria-hidden="true" tabindex="-1">емейл</span>
-        </a>
-        <a class="toolbar__login button" href="login.html">Авторизация</a>
+      <div class="header__toolbar">
+        <ul class="toolbar">
+          <li class="toolbar__item toolbar__item--call">
+            <a class="icon-button icon-button--orange" href="tel:88005558628">
+              <svg class="icon-button__icon icon-button__icon--phone">
+                <use xlink:href="img/sprite.svg#phone-2"></use>
+              </svg>
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">8 800 555-86-28.</span>
+            </a>
+          </li>
+          <li class="toolbar__item toolbar__item--mail">
+            <a class="icon-button icon-button--yellow" href="mailto:mail@htmlacademy.ru">
+              <svg class="icon-button__icon icon-button__icon--mail">
+                <use xlink:href="img/sprite.svg#mail-2"></use>
+              </svg>
+              <span class="visually-hidden" aria-hidden="true" tabindex="-1">емейл.</span>
+            </a>
+          </li>
+          <li class="toolbar__item toolbar__item--login">
+            <a class="button button--round button--yellow" href="login.html">Авторизация</a>
+          </li>
+        </ul>
       </div>
 
       <div class="header__mobile mobile-menu">
         <nav class="mobile-menu__nav mobile-nav">
-          <ul class="mobile-nav__list"></ul>
+          <ul class="mobile-nav__list">
             <li class="mobile-nav__item">
               <a class="mobile-nav__link" href="about.html">О сервисе</a>
             </li>
@@ -63,33 +80,57 @@
           </ul>
         </nav>
 
-        <a class="mobile-menu__login button" href="login.html">Авторизация</a>
+        <button class="mobile-menu__login button button--round button--yellow" href="login.html">
+          <span class="button__text">Авторизация</span>
+        </button>
 
         <div class="mobile-menu__contacts">
-          <a class="link-icon" href="tel:88005558628">
-            8 800 555-86-28
+          <a class="link-contact" href="tel:88005558628">
+            <span class="link-contact__icon">
+              <svg class="link-contact__svg link-contact__svg--phone">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="link-contact__text">8 800 555-86-28</span>
           </a>
-          <a class="link-icon" href="mailto:mail@htmlacademy.ru">
-            mail@htmlacademy.ru
+          <a class="link-contact" href="mailto:mail@htmlacademy.ru">
+            <span class="link-contact__icon">
+              <svg class="link-contact__svg link-contact__svg--mail">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+            </span>
+            <span class="link-contact__text">mail@htmlacademy.ru</span>
           </a>
         </div>
 
-        <ul class="mobile-menu__social social">
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#" target="_blank">
-              иконка
-              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Facebook</span>
-            </a>
-            <a class="social__link social__link--vk" href="#" target="_blank">
-              иконка
-              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Вконтакте</span>
-            </a>
-            <a class="social__link social__link--instagram" href="#" target="_blank">
-              иконка
-              <span class="visually-hidden" aria-hidden="true" tabindex="-1">Instagram</span>
-            </a>
-          </li>
-        </ul>
+        <div class="mobile-menu__social">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-button" href="#" target="_blank">
+                <svg class="social-button__icon social-button__icon--telegram">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Telegram.</span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-button" href="#" target="_blank">
+                <svg class="social-button__icon social-button__icon--vk">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">ВКонтакте.</span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-button" href="#" target="_blank">
+                <svg class="social-button__icon social-button__icon--youtube">
+                  <use xlink:href="img/sprite.svg#youtube"></use>
+                </svg>
+                <span class="visually-hidden" aria-hidden="true" tabindex="-1">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -101,18 +142,18 @@
 
             <div class="header-page__profile">
               <div class="header-page__level">
-                <div class="level-label level-label--large">
+                <div class="level-label level-label--medium level-label--light">
                   <b class="level-label__count">80</b>
                   <p class="level-label__text">level</p>
-                  <svg class="level-label__progress" width="100" height="100" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="48.5" transform="rotate(-90 50 50)" fill="transparent" stroke="#ff8d30" stroke-width="4" stroke-dasharray="304" stroke-dashoffset="61" stroke-linecap="round"/>
+                  <svg class="level-label__svg" width="95" height="95">
+                    <circle class="level-label__circle" r="46" cx="47.5" cy="47.5" stroke-dasharray="calc(46 * 2 * 3.14)" stroke-dashoffset="calc(289 - (289 * 80) / 100)"/>
                   </svg>
                 </div>
               </div>
 
               <div class="header-avatar">
-                <img class="header-avatar__img" src="img/foto.jpg" width="190" height="190" alt="Петя Демин">
-                <button class="header-avatar__button button" type="button">Фото</button>
+                <img class="header-avatar__img" src="img/ava-demin.jpg" width="190" height="190" alt="Петя Демин">
+                <button class="header-avatar__button button button--blue" type="button">Фото</button>
               </div>
             </div>
           </div>
@@ -124,20 +165,30 @@
         <div class="container">
           <div class="profile-info__grid">
             <h2 class="visually-hidden" aria-hidden="true" tabindex="-1">Персональная информация</h2>
-            <div class="profile-info__level">
+
+            <div class="profile-info__level profile-info__level--large">
               <div class="level-label level-label--large">
                 <b class="level-label__count">80</b>
                 <p class="level-label__text">level</p>
-                <svg class="level-label__progress" width="100" height="100" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="48.5" transform="rotate(-90 50 50)" fill="transparent" stroke="#ff8d30" stroke-width="4" stroke-dasharray="304" stroke-dashoffset="61" stroke-linecap="round"/>
+                <svg class="level-label__svg" width="100" height="100">
+                  <circle class="level-label__circle" r="48.5" cx="50" cy="50" stroke-dasharray="calc(48.5 * 2 * 3.14)" stroke-dashoffset="calc(305 - (305 * 80) / 100)">
                 </svg>
-
               </div>
             </div>
 
-            <img class="profile-info__avatar" src="img/foto.jpg" width="100" height="100" alt="Петя Демин">
+            <div class="profile-info__level profile-info__level--medium">
+              <div class="level-label level-label--medium">
+                <b class="level-label__count">80</b>
+                <p class="level-label__text">level</p>
+                <svg class="level-label__svg" width="95" height="95">
+                  <circle class="level-label__circle" r="46" cx="47.5" cy="47.5" stroke-dasharray="calc(46 * 2 * 3.14)" stroke-dashoffset="calc(289 - (289 * 80) / 100)"/>
+                </svg>
+              </div>
+            </div>
 
-            <button class="profile-info__button-avatar button" type="button">Сменить фото</button>
+            <img class="profile-info__avatar" src="img/ava-demin.jpg" width="100" height="100" alt="Петя Демин">
+
+            <button class="profile-info__button-avatar button button--blue" type="button">Сменить фото</button>
 
             <div class="profile-info__tag profile-tag-box">
               <h3 class="profile-tag-box__title">Тэги</h3>
@@ -148,21 +199,29 @@
               <h3 class="profile-transport-box__title">Транспорт</h3>
 
               <ul class="profile-transport-box__list">
-                <li class="profile-transport-box__item">
-                  x
-                  <div class="profile-transport-box__tooltip tooltip">Авиаперелет</div>
+                <li class="profile-transport-box__item tooltip">
+                  <svg class="profile-transport-box__icon profile-transport-box__icon--active profile-transport-box__icon--plane">
+                    <use xlink:href="img/sprite.svg#plane"></use>
+                  </svg>
+                  <div class="tooltip__text">Авиаперелет</div>
                 </li>
-                <li>
-                  x
-                  <div class="profile-transport-box__tooltip tooltip">Автотранспорт</div>
+                <li class="profile-transport-box__item tooltip">
+                  <svg class="profile-transport-box__icon profile-transport-box__icon--bus">
+                    <use xlink:href="img/sprite.svg#bus"></use>
+                  </svg>
+                  <div class="tooltip__text">Автотранспорт</div>
                 </li>
-                <li>
-                  x
-                  <div class="profile-transport-box__tooltip tooltip">Велосипед</div>
+                <li class="profile-transport-box__item tooltip">
+                  <svg class="profile-transport-box__icon profile-transport-box__icon--bicycle">
+                    <use xlink:href="img/sprite.svg#bicycle"></use>
+                  </svg>
+                  <div class="tooltip__text">Велосипед</div>
                 </li>
-                <li>
-                  x
-                  <div class="profile-transport-box__tooltip tooltip">Пешком</div>
+                <li class="profile-transport-box__item tooltip">
+                  <svg class="profile-transport-box__icon profile-transport-box__icon--run">
+                    <use xlink:href="img/sprite.svg#run"></use>
+                  </svg>
+                  <div class="tooltip__text">Пешком</div>
                 </li>
               </ul>
             </div>
@@ -185,9 +244,9 @@
                   <div class="plan-card__content">
                     <ul class="plan-card__list">
                       <li class="plan-card__item">3 попутчика</li>
-                      <li class="plan-card__item">26 мар — 29 мар</li>
+                      <li class="plan-card__item">26 мар &#8212; 29 мар</li>
                     </ul>
-                    <button class="profile-plans__button button" type="button">Изменить</button>
+                    <button class="plan-card__button button" type="button">Изменить</button>
                   </div>
                 </div>
               </li>
@@ -202,7 +261,7 @@
                       <li class="plan-card__item">1 попутчик</li>
                       <li class="plan-card__item">1 июл — 15 июл</li>
                     </ul>
-                    <button class="profile-plans__button button" type="button">Изменить</button>
+                    <button class="plan-card__button button" type="button">Изменить</button>
                   </div>
                 </div>
               </li>
@@ -216,128 +275,193 @@
           <div class="profile-add-plan__grid">
             <h2 class="profile-add-plan__title">Добавить план:</h2>
 
-            <ul class="profile-add-plan__dotnav profile-add-plan-dotnav">
-              <li class="profile-add-plan-dotnav__item profile-add-plan-dotnav__item--active">
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Даты</span>
-              </li>
-              <li class="profile-add-plan-dotnav__item">
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Маршрут</span>
-              </li>
-              <li class="profile-add-plan-dotnav__item">
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Развлечения</span>
-              </li>
-            </ul>
+            <div class="profile-add-plan__dotnav">
+              <ul class="profile-add-plan-dotnav">
+                <li class="profile-add-plan-dotnav__item profile-add-plan-dotnav__item--active">
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">Даты</span>
+                </li>
+                <li class="profile-add-plan-dotnav__item">
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">Маршрут</span>
+                </li>
+                <li class="profile-add-plan-dotnav__item">
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">Развлечения</span>
+                </li>
+              </ul>
+            </div>
 
             <form class="profile-add-plan__steps" action="https://echo.htmlacademy.ru/" method="post">
-              <fieldset class="add-plan-step" id="profile-add-plan-step-1">
+              <fieldset class="add-plan-step add-plan-step--first" id="profile-add-plan-step-1">
                 <div class="add-plan-step__header">
                   <legend class="add-plan-step__legend">
                     <span class="add-plan-step__number">Шаг 1. </span>
                     Даты пребывания
                   </legend>
-                  <p class="add-plan-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+                  <p class="add-plan-step__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку, и&nbsp;ее&nbsp;предполагаемую длительность.</p>
 
-                  <ul class="add-plan-step__breadcrumb add-plan-step-breadcrumb">
-                    <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
-                      Даты
-                    </li>
-                    <li class="add-plan-step-breadcrumb__item">
-                      Маршрут
-                    </li>
-                    <li class="add-plan-step-breadcrumb__item">
-                      Развлечения
-                    </li>
-                  </ul>
+                  <div class="add-plan-step__breadcrumb">
+                    <ul class="add-plan-step-breadcrumb">
+                      <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
+                        Даты
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item">
+                        Маршрут
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item">
+                        Развлечения
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
-                <label class="add-plan-step__field-companion field-number">
+                <label class="add-plan-step__field add-plan-step__field--companion field-number">
                   <span class="field-number__label">Ищу попутчиков:</span>
                   <span class="field-number__unit">чел.</span>
 
                   <div class="field-number__control input-number">
-                    <button class="input-number__btn" type="button">
-                      x
+                    <button class="input-number__btn button" type="button">
+                      <svg class="input-number__icon input-number__icon--minus">
+                        <use xlink:href="img/sprite.svg#minus"></use>
+                      </svg>
                     </button>
-                    <input class="input-number__input" type="number" name="number-people">
-                    <button class="input-number__btn" type="button">
-                      x
+                    <input class="input-number__input" type="number" name="number-days" value="2">
+                    <button class="input-number__btn button" type="button">
+                      <svg class="input-number__icon input-number__icon--plus">
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
                     </button>
                   </div>
                 </label>
 
-                <label class="add-plan-step__field-day field-number">
+                <label class="add-plan-step__field add-plan-step__field--day field-number">
                   <span class="field-number__label">Длительность:</span>
                   <span class="field-number__unit">дн.</span>
 
                   <div class="field-number__control input-number">
-                    <button class="input-number__btn" type="button">
-                      x
+                    <button class="input-number__btn button" type="button">
+                      <svg class="input-number__icon input-number__icon--minus">
+                        <use xlink:href="img/sprite.svg#minus"></use>
+                      </svg>
                     </button>
-                    <input class="input-number__input" type="number" name="number-days">
-                    <button class="input-number__btn" type="button">
-                      x
+                    <input class="input-number__input" type="number" name="number-days" value="3">
+                    <button class="input-number__btn button" type="button">
+                      <svg class="input-number__icon input-number__icon--plus">
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
                     </button>
                   </div>
                 </label>
 
-                <label class="add-plan-step__field-children field">
-                  <input class="field__control checkbox" type="checkbox" name="children">
-                  <span class="field__label">Можно с детьми</span>
+                <label class="add-plan-step__field add-plan-step__field--children checkbox">
+                  <input class="checkbox__input" type="checkbox" name="children" checked>
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Можно с детьми</span>
                 </label>
 
                 <div class="add-plan-step__calendar calendar">
                   <div class="calendar__header">
-                    <button class="calendar__prev" type="button">
-                      x
+                    <button class="calendar__button calendar__button--prev button" type="button">
+                      <svg class="calendar__icon">
+                        <use xlink:href="img/sprite.svg#chevron-left"></use>
+                      </svg>
                       <span class="visually-hidden" aria-hidden="true" tabindex="-1">Предыдущий месяц</span>
                     </button>
                     <p class="calendar__title">Март 2019</p>
-                    <button class="calendar__next" type="button">
-                      x
+                    <button class="calendar__nebuttont calendar__button--next button" type="button">
+                      <svg class="calendar__icon">
+                        <use xlink:href="img/sprite.svg#chevron-right"></use>
+                      </svg>
                       <span class="visually-hidden" aria-hidden="true" tabindex="-1">Следующий месяц</span>
                     </button>
                   </div>
 
-                  <ul class="calendar__days">
-                    <li class="calendar__day">
-                      П<span class="calendar__week-text">н</span>
+                  <ul class="calendar__week">
+                    <li class="calendar__weekday">
+                      П<span class="calendar__letter">н</span>
                     </li>
-                    <li class="calendar__day">
-                      В<span class="calendar__week-text">т</span>
+                    <li class="calendar__weekday">
+                      В<span class="calendar__letter">т</span>
                     </li>
-                    <li class="calendar__day">
-                      С<span class="calendar__week-text">р</span>
+                    <li class="calendar__weekday">
+                      С<span class="calendar__letter">р</span>
                     </li>
-                    <li class="calendar__day">
-                      Ч<span class="calendar__week-text">т</span>
+                    <li class="calendar__weekday">
+                      Ч<span class="calendar__letter">т</span>
                     </li>
-                    <li class="calendar__day">
-                      П<span class="calendar__week-text">т</span>
+                    <li class="calendar__weekday">
+                      П<span class="calendar__letter">т</span>
                     </li>
-                    <li class="calendar__day calendar__day--red">
-                      С<span class="calendar__week-text">б</span>
+                    <li class="calendar__weekday calendar__weekday--red">
+                      С<span class="calendar__letter">б</span>
                     </li>
-                    <li class="calendar__day calendar__day--red">
-                      В<span class="calendar__week-text">с</span>
+                    <li class="calendar__weekday calendar__weekday--red">
+                      В<span class="calendar__letter">с</span>
                     </li>
                   </ul>
 
-                  <ul class="calendar__dates">
-                    <li class="calendar__date calendar__day--disable">1</li>
-                    <li class="calendar__date calendar__day--disable">2</li>
-                    <li class="calendar__date calendar__day--disable">3</li>
-                    <li class="calendar__date calendar__day--active calendar__day--selected">4</li>
-                    <li class="calendar__date calendar__day--selected">5</li>
-                    <li class="calendar__date">6</li>
-                    <li class="calendar__date">7</li>
-                    <li class="calendar__date">8</li>
+                  <ul class="calendar__days">
+                    <li class="calendar__day calendar__day--disable">23</li>
+                    <li class="calendar__day calendar__day--disable">24</li>
+                    <li class="calendar__day calendar__day--disable">25</li>
+                    <li class="calendar__day calendar__day--disable">26</li>
+                    <li class="calendar__day calendar__day--disable">27</li>
+                    <li class="calendar__day calendar__day--disable">28</li>
+                    <li class="calendar__day calendar__day--disable">
+                      1
+                      <p class="calendar__month">мар</p>
+                    </li>
+                    <li class="calendar__day calendar__day--disable">2</li>
+                    <li class="calendar__day calendar__day--disable">3</li>
+                    <li class="calendar__day calendar__day--disable">4</li>
+                    <li class="calendar__day calendar__day--disable">5</li>
+                    <li class="calendar__day calendar__day--disable">6</li>
+                    <li class="calendar__day calendar__day--disable">7</li>
+                    <li class="calendar__day calendar__day--disable">8</li>
+                    <li class="calendar__day calendar__day--disable">9</li>
+                    <li class="calendar__day calendar__day--disable">10</li>
+                    <li class="calendar__day calendar__day--disable">11</li>
+                    <li class="calendar__day calendar__day--disable">12</li>
+                    <li class="calendar__day calendar__day--disable">13</li>
+                    <li class="calendar__day calendar__day--disable">14</li>
+                    <li class="calendar__day calendar__day--disable">15</li>
+                    <li class="calendar__day calendar__day--disable">16</li>
+                    <li class="calendar__day calendar__day--disable">17</li>
+                    <li class="calendar__day calendar__day--disable">18</li>
+                    <li class="calendar__day calendar__day--disable">19</li>
+                    <li class="calendar__day calendar__day--disable">20</li>
+                    <li class="calendar__day calendar__day--disable">21</li>
+                    <li class="calendar__day calendar__day--disable">22</li>
+                    <li class="calendar__day calendar__day--disable">23</li>
+                    <li class="calendar__day calendar__day--disable">24</li>
+                    <li class="calendar__day calendar__day--disable">25</li>
+                    <li class="calendar__day calendar__day--active">
+                      26
+                      <p class="calendar__desc">Заезд</p>
+                    </li>
+                    <li class="calendar__day calendar__day--active">27</li>
+                    <li class="calendar__day calendar__day--active">
+                      28
+                      <p class="calendar__desc">Выезд</p>
+                    </li>
+                    <li class="calendar__day">29</li>
+                    <li class="calendar__day">30</li>
+                    <li class="calendar__day">31</li>
+                    <li class="calendar__day">
+                      1
+                      <p class="calendar__month">мар</p>
+                    </li>
+                    <li class="calendar__day">2</li>
+                    <li class="calendar__day">3</li>
+                    <li class="calendar__day">4</li>
+                    <li class="calendar__day">5</li>
                   </ul>
                 </div>
 
-                <a class="add-plan-step__btn-next" href="#profile-add-plan-step-2">Следующий шаг</a>
+                <div class="add-plan-step__footer">
+                  <a class="add-plan-step__btn-next button button--yellow" href="#profile-add-plan-step-2">Следующий шаг</a>
+                </div>
               </fieldset>
 
-              <fieldset class="add-plan-step" id="profile-add-plan-step-2">
+              <fieldset class="add-plan-step add-plan-step--second" id="profile-add-plan-step-2">
                 <div class="add-plan-step__header">
                   <legend class="add-plan-step__legend">
                     <span class="add-plan-step__number">Шаг 2. </span>
@@ -345,161 +469,218 @@
                   </legend>
                   <p class="add-plan-step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
-                  <ul class="add-plan-step__breadcrumb add-plan-step-breadcrumb">
-                    <li class="add-plan-step-breadcrumb__item">
-                      Даты
+                  <div class="add-plan-step__breadcrumb">
+                    <ul class="add-plan-step-breadcrumb">
+                      <li class="add-plan-step-breadcrumb__item">
+                        Даты
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
+                        Маршрут
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item">
+                        Развлечения
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="add-plan-step__countries">
+                  <ul class="field-country">
+                    <li class="field-country__item field-country__item--checked">
+                      <!-- field-country__control--open -->
+                      <div class="field-country__control">
+                        <button class="field-country__button button" type="button">Босния и Герцеговина</button>
+
+                        <div class="field-country__options country-options">
+                          <div class="country-options__grid">
+                            <ul class="country-options__letters">
+                              <li class="country-options__letter country-options__letter--active">А</li>
+                              <li class="country-options__letter">Б</li>
+                              <li class="country-options__letter">В</li>
+                              <li class="country-options__letter">Г</li>
+                              <li class="country-options__letter">Д</li>
+                              <li class="country-options__letter">Е</li>
+                              <li class="country-options__letter">З</li>
+                              <li class="country-options__letter">И</li>
+                              <li class="country-options__letter">К</li>
+                              <li class="country-options__letter">Л</li>
+                              <li class="country-options__letter">М</li>
+                              <li class="country-options__letter">Н</li>
+                              <li class="country-options__letter">О</li>
+                              <li class="country-options__letter">П</li>
+                              <li class="country-options__letter">Р</li>
+                              <li class="country-options__letter">С</li>
+                              <li class="country-options__letter">Т</li>
+                              <li class="country-options__letter">У</li>
+                              <li class="country-options__letter">Ф</li>
+                              <li class="country-options__letter">Х</li>
+                              <li class="country-options__letter">Ч</li>
+                              <li class="country-options__letter">Ш</li>
+                              <li class="country-options__letter">Э</li>
+                              <li class="country-options__letter">Ю</li>
+                              <li class="country-options__letter">Я</li>
+                            </ul>
+                            <ul class="country-options__countrys">
+                              <li class="country-options__country">Австралия</li>
+                              <li class="country-options__country">Австрия</li>
+                              <li class="country-options__country">Азербайджан</li>
+                              <li class="country-options__country">Албания</li>
+                              <li class="country-options__country">Алжир</li>
+                              <li class="country-options__country">Ангола</li>
+                              <li class="country-options__country">Андорра</li>
+                              <li class="country-options__country">Антигуа и Барбуда</li>
+                              <li class="country-options__country">Аргентина</li>
+                              <li class="country-options__country">Армения</li>
+                              <li class="country-options__country">Афганистан</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field-country__flag">
+                        <img class="field-country__flag-img" src="img/flag-bosnia.png" alt="Босния и Герцеговина">
+                      </div>
+
+                      <button class="field-country__delete button" type="button">
+                        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Удалить страну</span>
+                      </button>
                     </li>
-                    <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
-                      Маршрут
+
+                    <li class="field-country__item field-country__item--checked">
+                      <!-- field-country__control--open -->
+                      <div class="field-country__control">
+                        <button class="field-country__button button" type="button">Чехия</button>
+
+                        <div class="field-country__options country-options">
+                          <div class="country-options__grid">
+                            <ul class="country-options__letters">
+                              <li class="country-options__letter country-options__letter--active">А</li>
+                              <li class="country-options__letter">Б</li>
+                              <li class="country-options__letter">В</li>
+                              <li class="country-options__letter">Г</li>
+                              <li class="country-options__letter">Д</li>
+                              <li class="country-options__letter">Е</li>
+                              <li class="country-options__letter">З</li>
+                              <li class="country-options__letter">И</li>
+                              <li class="country-options__letter">К</li>
+                              <li class="country-options__letter">Л</li>
+                              <li class="country-options__letter">М</li>
+                              <li class="country-options__letter">Н</li>
+                              <li class="country-options__letter">О</li>
+                              <li class="country-options__letter">П</li>
+                              <li class="country-options__letter">Р</li>
+                              <li class="country-options__letter">С</li>
+                              <li class="country-options__letter">Т</li>
+                              <li class="country-options__letter">У</li>
+                              <li class="country-options__letter">Ф</li>
+                              <li class="country-options__letter">Х</li>
+                              <li class="country-options__letter">Ч</li>
+                              <li class="country-options__letter">Ш</li>
+                              <li class="country-options__letter">Э</li>
+                              <li class="country-options__letter">Ю</li>
+                              <li class="country-options__letter">Я</li>
+                            </ul>
+                            <ul class="country-options__countrys">
+                              <li class="country-options__country">Австралия</li>
+                              <li class="country-options__country">Австрия</li>
+                              <li class="country-options__country">Азербайджан</li>
+                              <li class="country-options__country">Албания</li>
+                              <li class="country-options__country">Алжир</li>
+                              <li class="country-options__country">Ангола</li>
+                              <li class="country-options__country">Андорра</li>
+                              <li class="country-options__country">Антигуа и Барбуда</li>
+                              <li class="country-options__country">Аргентина</li>
+                              <li class="country-options__country">Армения</li>
+                              <li class="country-options__country">Афганистан</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field-country__flag">
+                        <img class="field-country__flag-img" src="img/flag-czechia.png" alt="Чехия">
+                      </div>
+
+                      <button class="field-country__delete button" type="button">
+                        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Удалить страну</span>
+                      </button>
                     </li>
-                    <li class="add-plan-step-breadcrumb__item">
-                      Развлечения
+
+                    <li class="field-country__item field-country__item--choice">
+                      <!-- field-country__control--open -->
+                      <div class="field-country__control field-country__control--open">
+                        <button class="field-country__button button" type="button">Выберите страну</button>
+
+                        <div class="field-country__options country-options">
+                          <div class="country-options__grid">
+                            <ul class="country-options__letters">
+                              <li class="country-options__letter country-options__letter--active">А</li>
+                              <li class="country-options__letter">Б</li>
+                              <li class="country-options__letter">В</li>
+                              <li class="country-options__letter">Г</li>
+                              <li class="country-options__letter">Д</li>
+                              <li class="country-options__letter">Е</li>
+                              <li class="country-options__letter">З</li>
+                              <li class="country-options__letter">И</li>
+                              <li class="country-options__letter">К</li>
+                              <li class="country-options__letter">Л</li>
+                              <li class="country-options__letter">М</li>
+                              <li class="country-options__letter">Н</li>
+                              <li class="country-options__letter">О</li>
+                              <li class="country-options__letter">П</li>
+                              <li class="country-options__letter">Р</li>
+                              <li class="country-options__letter">С</li>
+                              <li class="country-options__letter">Т</li>
+                              <li class="country-options__letter">У</li>
+                              <li class="country-options__letter">Ф</li>
+                              <li class="country-options__letter">Х</li>
+                              <li class="country-options__letter">Ч</li>
+                              <li class="country-options__letter">Ш</li>
+                              <li class="country-options__letter">Э</li>
+                              <li class="country-options__letter">Ю</li>
+                              <li class="country-options__letter">Я</li>
+                            </ul>
+                            <ul class="country-options__countrys">
+                              <li class="country-options__country">Австралия</li>
+                              <li class="country-options__country">Австрия</li>
+                              <li class="country-options__country">Азербайджан</li>
+                              <li class="country-options__country">Албания</li>
+                              <li class="country-options__country">Алжир</li>
+                              <li class="country-options__country">Ангола</li>
+                              <li class="country-options__country">Андорра</li>
+                              <li class="country-options__country">Антигуа и Барбуда</li>
+                              <li class="country-options__country">Аргентина</li>
+                              <li class="country-options__country">Армения</li>
+                              <li class="country-options__country">Афганистан</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="field-country__delete button" type="button">
+                        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Удалить страну</span>
+                      </button>
+                    </li>
+
+                    <li class="field-country__item field-country__item--add">
+                      <div class="field-country__control">
+                        <button class="field-country__button field-country__button--add button" type="button">
+                          Добавить страну
+                        </button>
+                      </div>
+
                     </li>
                   </ul>
                 </div>
 
-                <ul class="add-plan-step__countries field-country">
-                  <li class="field-country__item">
-                    <div class="field-country__select">
-                      <button class="field-country__btn">
-                        <span class="field-country__value">Босния и Герцеговина</span>
-                      </button>
-                      <div class="field-country__options options">
-                        <ul class="field-country__letters">
-                          <li class="field-country__letter field-country__letter--active">
-                            <a class="field-country__letter-link" href="">А</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Б</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Г</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Д</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Е</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">З</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">И</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">К</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Л</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">М</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Н</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">О</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">П</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Р</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">С</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Т</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">У</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Ф</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Х</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Ч</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Ш</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Э</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Ю</a>
-                          </li>
-                          <li class="field-country__letter">
-                            <a class="field-country__letter-link" href="">Я</a>
-                          </li>
-                        </ul>
-
-                        <ul class="field-country__countrys">
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Австралия</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Австрия</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Азербайджан</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Албания</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Алжир</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Ангола</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Андорра</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Антигуа и Барбуда</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Аргентина</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Армения</a>
-                          </li>
-                          <li class="field-country__country">
-                            <a class="field-country__country-link" href="">Афганистан</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="field-country__flag">
-                      <img class="field-country__flag-img" src="" alt="Босния и Герцеговина">
-                    </div>
-
-                    <button class="field-country__delete" type="button">
-                      x
-                      <span class="visually-hidden" aria-hidden="true" tabindex="-1">Удалить страну</span>
-                    </button>
-                  </li>
-
-                  <li>
-                    <button class="profile-add-plan__btn-add-country" type="button">
-                      Добавить страну
-                    </button>
-                  </li>
-                </ul>
-
-                <a class="add-plan-step__btn-next" href="#profile-add-plan-step-2">Следующий шаг</a>
-                <a class="add-plan-step__btn-prev" href="#profile-add-plan-step-1">Шаг назад</a>
+                <div class="add-plan-step__footer">
+                  <a class="add-plan-step__btn-next button button--yellow" href="#profile-add-plan-step-3">Следующий шаг</a>
+                  <a class="add-plan-step__btn-prev button" href="#profile-add-plan-step-1">На шаг назад</a>
+                </div>
               </fieldset>
 
-              <fieldset class="add-plan-step" id="profile-add-plan-step-3">
+              <fieldset class="add-plan-step add-plan-step--third" id="profile-add-plan-step-3">
                 <div class="add-plan-step__header">
                   <legend class="add-plan-step__legend">
                     <span class="add-plan-step__number">Шаг 3. </span>
@@ -507,37 +688,45 @@
                   </legend>
                   <p class="add-plan-step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
-                  <ul class="add-plan-step__breadcrumb add-plan-step-breadcrumb">
-                    <li class="add-plan-step-breadcrumb__item">
-                      Даты
+                  <div class="add-plan-step__breadcrumb">
+                    <ul class="add-plan-step-breadcrumb">
+                      <li class="add-plan-step-breadcrumb__item">
+                        Даты
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item">
+                        Маршрут
+                      </li>
+                      <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
+                        Развлечения
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="add-plan-step__fun">
+                  <ul class="fields-fun">
+                    <li class="fields-fun__item">
+                      <label class="fields-fun__grid">
+                        <span class="fields-fun__label">Босния и Герцеговина</span>
+                        <img class="fields-fun__flag" src="img/flag-bosnia.png" alt="Босния и Герцеговина">
+                        <textarea class="fields-fun__control" name="fun-1" placeholder="План действий"></textarea>
+                      </label>
                     </li>
-                    <li class="add-plan-step-breadcrumb__item">
-                      Маршрут
-                    </li>
-                    <li class="add-plan-step-breadcrumb__item add-plan-step-breadcrumb__item--active">
-                      Развлечения
+                    <li class="fields-fun__item">
+                      <label class="fields-fun__grid">
+                        <span class="fields-fun__label">Чехия</span>
+                        <img class="fields-fun__flag" src="img/flag-czechia.png" alt="Чехия">
+                        <textarea class="fields-fun__control" name="fun-2" placeholder="План действий"></textarea>
+                      </label>
                     </li>
                   </ul>
                 </div>
 
-                <label class="add-plan-step__field-fun field-fun">
-                  <div class="field-fun__header">
-                    <span class="field-fun__label">Босния и Герцеговина</span>
-                    <img class="field-fun__flag" src="" alt="Босния и Герцеговина">
-                  </div>
-                  <textarea class="field-fun__control textarea" name="fun-1"></textarea>
-                </label>
-
-                <label class="add-plan-step__field-fun field-fun">
-                  <div class="field-fun__header">
-                    <span class="field-fun__label">Чехия</span>
-                    <img class="field-fun__flag" src="" alt="Чехия">
-                  </div>
-                  <textarea class="field-fun__control textarea" name="fun-2"></textarea>
-                </label>
-
-                <button class="add-plan-step__btn-submit" type="submit">Отправить</button>
-                <a class="add-plan-step__btn-prev" href="#profile-add-plan-step-2">Шаг назад</a>
+                <div class="add-plan-step__footer">
+                  <button class="add-plan-step__btn-next button button--yellow" type="submit">Отправить</button>
+                  <a class="add-plan-step__btn-prev button" href="#profile-add-plan-step-2">На шаг назад</a>
+                </div>
               </fieldset>
             </form>
           </div>
@@ -548,30 +737,38 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__grid">
-          <a class="footer__logo logo" href="/">
-            <svg class="logo__img">
-              <use class="logo__img--mobile" xlink:href="img/sprite.svg#logo-mobile"></use>
-              <use class="logo__img--full" xlink:href="img/sprite.svg#logo-full"></use>
-            </svg>
+          <a class="footer__logo" href="/">
             <span class="visually-hidden" aria-hidden="true" tabindex="-1">Погнали?</span>
           </a>
 
-          <ul class="footer__social social">
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="#" target="_blank">
-                x
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Telegram</span>
-              </a>
-              <a class="social__link social__link--vk" href="#" target="_blank">
-                x
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">Вконтакте</span>
-              </a>
-              <a class="social__link social__link--youtube" href="#" target="_blank">
-                x
-                <span class="visually-hidden" aria-hidden="true" tabindex="-1">YouTube</span>
-              </a>
-            </li>
-          </ul>
+          <div class="footer__social">
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-button social-button--large social-button--yellow" href="#" target="_blank">
+                  <svg class="social-button__icon social-button__icon--telegram">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">Telegram.</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-button social-button--large social-button--yellow" href="#" target="_blank">
+                  <svg class="social-button__icon social-button__icon--vk">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">ВКонтакте.</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-button social-button--large social-button--yellow" href="#" target="_blank">
+                  <svg class="social-button__icon social-button__icon--youtube">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                  <span class="visually-hidden" aria-hidden="true" tabindex="-1">YouTube.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div class="footer__creator creator">
             <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
@@ -581,7 +778,8 @@
           </div>
         </div>
       </div>
-
     </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

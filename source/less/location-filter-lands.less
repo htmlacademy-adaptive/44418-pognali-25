@@ -7,3 +7,46 @@
     display: flex;
   }
 }
+
+.location-filter-lands__item {
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+}
+
+.location-filter-lands__link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: #a6aabe;
+  transition: color 0.2s ease-in-out;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: #696f8a;
+  }
+}
+
+.location-filter-lands__item--active {
+  .location-filter-lands__link {
+    color: #192144;
+  }
+}
