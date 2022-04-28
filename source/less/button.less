@@ -11,7 +11,7 @@
   position: relative;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  transition-property: color, background-color, border-color, fill;
+  transition-property: color, background-color, border-color, opacity, fill;
 
   &:disabled {
     .button__text,
@@ -83,6 +83,18 @@
 
   &:disabled {
     background-color: #ffbd30;
+  }
+}
+
+.button--blue {
+  background-color: #dfe3f0;
+
+  &:hover {
+    background-color: #d1d7e9;
+  }
+
+  &:disabled {
+    background-color: #dfe3f0;
   }
 }
 

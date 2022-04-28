@@ -32,6 +32,9 @@ let sticky = function() {
 
 
 toggle.addEventListener("click", openMobileMenu)
-rateButton.addEventListener("click", openModal)
-btnModalClose.addEventListener("click", closeModal)
 window.addEventListener('scroll', sticky)
+
+if(modal) {
+  rateButton.addEventListener("click", openModal)
+  btnModalClose.addEventListener("click", closeModal)
+}
