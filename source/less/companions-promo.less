@@ -13,15 +13,23 @@
   position: relative;
   z-index: 4;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-companions-promo-mobile@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/bg-companions-promo-tablet.png");
     background-position: center 130px;
-    background-size: auto;
+    background-size: contain;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-top: -60px;
     padding-top: 200px;
     padding-bottom: 87px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-companions-promo-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -29,6 +37,10 @@
     background-position: center 130px;
     padding-top: 190px;
     padding-bottom: 138px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-companions-promo-desktop@2x.png");
+    }
   }
 }
 
