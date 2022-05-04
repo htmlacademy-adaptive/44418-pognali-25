@@ -1,9 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
-// import postcss from 'postcss';
-// import autoprefixer from 'autoprefixer';
-// import csso from 'postcss-csso';
 import autoprefixer from 'gulp-autoprefixer';
 import csso from 'gulp-csso';
 import rename from 'gulp-rename';
