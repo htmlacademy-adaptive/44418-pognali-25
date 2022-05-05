@@ -66,6 +66,8 @@
   height: 32px;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
 
   @media (min-width: @tablet-width) {
     width: 43px;
@@ -79,7 +81,7 @@
 }
 
 .profile-transport-box__icon {
-  fill: #1d2e5b;
+  fill: rgba(29, 46, 91, 0.15);
 
   &--plane {
     width: 16px;
@@ -118,6 +120,20 @@
     @media (min-width: @tablet-width) {
       width: 18px;
       height: 18px;
+    }
+  }
+}
+
+.profile-transport-box__item--active {
+  .profile-transport-box__icon {
+    fill: #1d2e5b;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+
+    .profile-transport-box__icon {
+      fill: rgba(29, 46, 91, 0.7);
     }
   }
 }

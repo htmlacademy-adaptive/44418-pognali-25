@@ -218,12 +218,6 @@
     display: block;
   }
 
-  &:hover {
-    .field-country__button::before {
-      opacity: 1;
-    }
-  }
-
   @media (max-width: @mobile-width-only) {
     &::after {
       display: none;
@@ -278,6 +272,10 @@
 
   &:hover {
     border-color: #959bb2;
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   @media (min-width: @tablet-width) {
