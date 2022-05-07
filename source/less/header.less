@@ -7,7 +7,7 @@
   padding: 0 25px;
   box-sizing: border-box;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: auto 1fr auto;
@@ -73,6 +73,7 @@
     display: block;
     justify-self: start;
     position: relative;
+    height: 1em;
 
     &::before {
       content: "";
@@ -131,6 +132,7 @@
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 980;
 
   .header__logo {
     background-image: url("../img/logo-mobile-black.svg");

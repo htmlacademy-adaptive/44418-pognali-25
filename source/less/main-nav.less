@@ -16,9 +16,10 @@
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
-  line-height: 50px;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out;
+  line-height: 1;
+  overflow: hidden;
 
   &:hover {
     color: #ffd74b;
@@ -26,5 +27,26 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    .main-nav__link-text {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.main-nav__link-text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+  height: 1em;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    transform: translate3d(0, 0, 0);
   }
 }

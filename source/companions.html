@@ -25,13 +25,19 @@
       <nav class="header__nav">
         <ul class="main-nav">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">О сервисе</a>
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__link-text" data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="profile.html">Направления</a>
+            <a class="main-nav__link" href="profile.html">
+              <span class="main-nav__link-text" data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="companions.html">Попутчики</a>
+            <a class="main-nav__link" href="companions.html">
+              <span class="main-nav__link-text" data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -149,7 +155,7 @@
       </header>
 
       <!-- location-filter--open -->
-      <section class="location-filter location-filter--open">
+      <section class="location-filter">
         <div class="container">
           <div class="location-filter__grid">
             <h2 class="location-filter__title">Фильтрация по странам:</h2>
@@ -161,17 +167,17 @@
 
             <div class="location-filter__lands">
               <ul class="location-filter-lands">
-                <li class="location-filter-lands__item location-filter-lands__item--active">
-                  <a class="location-filter-lands__link" href="#">Европа</a>
+                <li class="location-filter-lands__item">
+                  <button class="location-filter-lands__link button" type="button">Европа</button>
                 </li>
                 <li class="location-filter-lands__item">
-                  <a class="location-filter-lands__link" href="#">Азия</a>
+                  <button class="location-filter-lands__link button" type="button">Азия</button>
                 </li>
                 <li class="location-filter-lands__item">
-                  <a class="location-filter-lands__link" href="#">Америка</a>
+                  <button class="location-filter-lands__link button" type="button">Америка</button>
                 </li>
                 <li class="location-filter-lands__item">
-                  <a class="location-filter-lands__link" href="#">Острова</a>
+                  <button class="location-filter-lands__link button" type="button">Острова</button>
                 </li>
               </ul>
             </div>
@@ -946,7 +952,7 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="companions-filter__fieldset companions-filter__fieldset--checkbox companions-filter__fieldset--open">
+                <fieldset class="companions-filter__fieldset companions-filter__fieldset--checkbox">
                   <div class="companions-filter__legend">Музыка</div>
                   <div class="companions-filter__wrap">
                     <label class="companions-filter__field checkbox-filter">
@@ -988,7 +994,7 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="companions-filter__fieldset companions-filter__fieldset--icon companions-filter__fieldset--open">
+                <fieldset class="companions-filter__fieldset companions-filter__fieldset--icon">
                   <div class="companions-filter__legend">Транспорт</div>
 
                   <div class="companions-filter__wrap">
@@ -1022,7 +1028,7 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="companions-filter__fieldset companions-filter__fieldset--range companions-filter__fieldset--open">
+                <fieldset class="companions-filter__fieldset companions-filter__fieldset--range">
                   <div class="companions-filter__legend">Левел</div>
                   <div class="companions-filter__wrap">
                     <div class="companions-filter__input-double input-double">
@@ -1050,14 +1056,16 @@
                 <li class="companions__item">
                   <div class="companion-card">
 
-                    <picture class="companion-card__avatar">
-                      <source media="(min-width: 1366px)" srcset="img/ava-firsova-285.jpg 1x, img/ava-firsova-285@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/ava-firsova-190.jpg 1x, img/ava-firsova-190@2x.jpg 2x">
-                      <img class="companion-card__img" src="img/ava-firsova.jpg" srcset="img/ava-firsova-100.jpg 1x, img/ava-firsova-100@2x.jpg 2x" alt="Таня Фирсова.">
-                    </picture>
+                    <a class="companion-card__avatar" href="firsova.html">
+                      <picture class="companion-card__picture">
+                        <source media="(min-width: 1366px)" srcset="img/ava-firsova-285.jpg 1x, img/ava-firsova-285@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/ava-firsova-190.jpg 1x, img/ava-firsova-190@2x.jpg 2x">
+                        <img class="companion-card__img" src="img/ava-firsova.jpg" srcset="img/ava-firsova-100.jpg 1x, img/ava-firsova-100@2x.jpg 2x" alt="Таня Фирсова.">
+                      </picture>
+                    </a>
 
                     <h3 class="companion-card__name">
-                      <a class="companion-card__link" href="profile.html">
+                      <a class="companion-card__link" href="firsova.html">
                         Таня <span class="companion-card__surname">Фирсова</span>
                       </a>
                     </h3>
@@ -1152,20 +1160,23 @@
                       </div>
                     </div>
 
-                    <button class="companion-card__button button button--round button--yellow" type="button">Позвать!</button>
+                    <a class="companion-card__button button button--round button--yellow" href="response.html">Позвать!</a>
                   </div>
                 </li>
                 <li class="companions__item">
                   <div class="companion-card">
 
-                    <picture class="companion-card__avatar">
-                      <source media="(min-width: 1366px)" srcset="img/ava-demin-285.jpg 1x, img/ava-demin-285@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/ava-demin-190.jpg img/ava-demin-190@2x.jpg">
-                      <img class="companion-card__img" src="img/ava-demin.jpg" srcset="img/ava-demin-100.jpg 1x, img/ava-demin-100@2x.jpg 2x" alt="Петя Демин.">
-                    </picture>
+                    <a class="companion-card__avatar" href="demin.html">
+                      <picture class="companion-card__picture">
+                        <source media="(min-width: 1366px)" srcset="img/ava-demin-285.jpg 1x, img/ava-demin-285@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/ava-demin-190.jpg img/ava-demin-190@2x.jpg">
+                        <img class="companion-card__img" src="img/ava-demin.jpg" srcset="img/ava-demin-100.jpg 1x, img/ava-demin-100@2x.jpg 2x" alt="Петя Демин.">
+                      </picture>
+                    </a>
+
 
                     <h3 class="companion-card__name">
-                      <a class="companion-card__link" href="profile.html">
+                      <a class="companion-card__link" href="demin.html">
                         Петя <span class="companion-card__surname">Демин</span>
                       </a>
                     </h3>
@@ -1256,20 +1267,22 @@
                       </div>
                     </div>
 
-                    <button class="companion-card__button button button--round button--yellow" type="button">Позвать!</button>
+                    <a class="companion-card__button button button--round button--yellow" href="response.html">Позвать!</a>
                   </div>
                 </li>
                 <li class="companions__item">
                   <div class="companion-card">
 
-                    <picture class="companion-card__avatar">
-                      <source media="(min-width: 1366px)" srcset="img/ava-smolov-285.jpg 1x, img/ava-smolov-285@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/ava-smolov-190.jpg img/ava-smolov-190@2x.jpg">
-                      <img class="companion-card__img" src="img/ava-smolov.jpg" srcset="img/ava-smolov-100.jpg 1x, img/ava-smolov-100@2x.jpg 2x" alt="Марк Смолов.">
-                    </picture>
+                    <a class="companion-card__avatar" href="smolov.html">
+                      <picture class="companion-card__picture">
+                        <source media="(min-width: 1366px)" srcset="img/ava-smolov-285.jpg 1x, img/ava-smolov-285@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/ava-smolov-190.jpg img/ava-smolov-190@2x.jpg">
+                        <img class="companion-card__img" src="img/ava-smolov.jpg" srcset="img/ava-smolov-100.jpg 1x, img/ava-smolov-100@2x.jpg 2x" alt="Марк Смолов.">
+                      </picture>
+                    </a>
 
                     <h3 class="companion-card__name">
-                      <a class="companion-card__link" href="profile.html">
+                      <a class="companion-card__link" href="smolov.html">
                         Марк <span class="companion-card__surname">Смолов</span>
                       </a>
                     </h3>
@@ -1364,20 +1377,22 @@
                       </div>
                     </div>
 
-                    <button class="companion-card__button button button--round button--yellow" type="button">Позвать!</button>
+                    <a class="companion-card__button button button--round button--yellow" href="response.html">Позвать!</a>
                   </div>
                 </li>
                 <li class="companions__item">
                   <div class="companion-card companion-card--online">
 
-                    <picture class="companion-card__avatar">
-                      <source media="(min-width: 1366px)" srcset="img/ava-rogova-285.jpg 1x, img/ava-rogova-285@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/ava-rogova-190.jpg img/ava-rogova-190@2x.jpg">
-                      <img class="companion-card__img" src="img/ava-rogova.jpg" srcset="img/ava-rogova-100.jpg 1x, img/ava-rogova-100@2x.jpg 2x" alt="Лариса Роговая.">
-                    </picture>
+                    <a class="companion-card__avatar" href="rogova.html">
+                      <picture class="companion-card__picture">
+                        <source media="(min-width: 1366px)" srcset="img/ava-rogova-285.jpg 1x, img/ava-rogova-285@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/ava-rogova-190.jpg img/ava-rogova-190@2x.jpg">
+                        <img class="companion-card__img" src="img/ava-rogova.jpg" srcset="img/ava-rogova-100.jpg 1x, img/ava-rogova-100@2x.jpg 2x" alt="Лариса Роговая.">
+                      </picture>
+                    </a>
 
                     <h3 class="companion-card__name">
-                      <a class="companion-card__link" href="profile.html">
+                      <a class="companion-card__link" href="rogova.html">
                         Лариса <span class="companion-card__surname">Роговая</span>
                       </a>
                     </h3>
@@ -1468,12 +1483,12 @@
                       </div>
                     </div>
 
-                    <button class="companion-card__button button button--round button--yellow" type="button">Позвать!</button>
+                    <a class="companion-card__button button button--round button--yellow" href="response.html">Позвать!</a>
                   </div>
                 </li>
               </ul>
 
-              <button class="companions__show-more button" type="button">Показать еще</button>
+              <a class="companions__show-more button" href="#">Показать еще</a>
 
               <div class="companions__footer">
                 <div class="companions__pagination">
@@ -1551,7 +1566,7 @@
           </div>
 
           <div class="footer__creator creator">
-            <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
+            <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               <p class="creator__text">Разработано</p>
               <img class="creator__icon" src="img/htmlacademy.svg" alt="htmlacademy" width="50">
             </a>

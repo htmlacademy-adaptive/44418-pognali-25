@@ -25,13 +25,19 @@
       <nav class="header__nav">
         <ul class="main-nav">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">О сервисе</a>
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__link-text" data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="profile.html">Направления</a>
+            <a class="main-nav__link" href="profile.html">
+              <span class="main-nav__link-text" data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="companions.html">Попутчики</a>
+            <a class="main-nav__link" href="companions.html">
+              <span class="main-nav__link-text" data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -194,40 +200,48 @@
 
             <button class="profile-info__button-avatar button button--blue" type="button">Сменить фото</button>
 
-            <div class="profile-info__tag profile-tag-box">
-              <h3 class="profile-tag-box__title">Тэги</h3>
-              <p class="profile-tag-box__text">#бургер #бар #футбол #концерт #крафт</p>
+            <div class="profile-info__tag">
+              <div class="profile-tag">
+                <h3 class="profile-tag__title">Тэги</h3>
+                <textarea class="profile-tag__textarea">#бургер #бар #футбол #концерт #крафт</textarea>
+              </div>
             </div>
 
             <div class="profile-info__transport profile-transport-box">
-              <h3 class="profile-transport-box__title">Транспорт</h3>
+              <div class="profile-transport">
+                <h3 class="profile-transport__title">Транспорт</h3>
 
-              <ul class="profile-transport-box__list">
-                <li class="profile-transport-box__item tooltip">
-                  <svg class="profile-transport-box__icon profile-transport-box__icon--active profile-transport-box__icon--plane" aria-label="Транспорт попутчика." focusable="false">
-                    <use xlink:href="img/sprite.svg#plane"></use>
-                  </svg>
-                  <div class="tooltip__text">Авиаперелет</div>
-                </li>
-                <li class="profile-transport-box__item tooltip">
-                  <svg class="profile-transport-box__icon profile-transport-box__icon--bus" aria-label="Транспорт попутчика." focusable="false">
-                    <use xlink:href="img/sprite.svg#bus"></use>
-                  </svg>
-                  <div class="tooltip__text">Автотранспорт</div>
-                </li>
-                <li class="profile-transport-box__item tooltip">
-                  <svg class="profile-transport-box__icon profile-transport-box__icon--bicycle" aria-label="Транспорт попутчика." focusable="false">
-                    <use xlink:href="img/sprite.svg#bicycle"></use>
-                  </svg>
-                  <div class="tooltip__text">Велосипед</div>
-                </li>
-                <li class="profile-transport-box__item tooltip">
-                  <svg class="profile-transport-box__icon profile-transport-box__icon--run" aria-label="Транспорт попутчика." focusable="false">
-                    <use xlink:href="img/sprite.svg#run"></use>
-                  </svg>
-                  <div class="tooltip__text">Пешком</div>
-                </li>
-              </ul>
+                <ul class="profile-transport__list">
+                  <li class="profile-transport__item">
+                    <button class="profile-transport__button profile-transport__button--active">
+                      <svg class="profile-transport__button-icon profile-transport__button-icon--plane" aria-label="Транспорт самолет." focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="profile-transport__item">
+                    <button class="profile-transport__button profile-transport__button--active">
+                      <svg class="profile-transport__button-icon profile-transport__button-icon--bus" aria-label="Транспорт автобус." focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="profile-transport__item">
+                    <button class="profile-transport__button">
+                      <svg class="profile-transport__button-icon profile-transport__button-icon--bicycle" aria-label="Транспорт велосипед." focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="profile-transport__item">
+                    <button class="profile-transport__button profile-transport__button--active">
+                      <svg class="profile-transport__button-icon profile-transport__button-icon--run" aria-label="Транспорт пешком." focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +264,7 @@
                       <li class="plan-card__item">3 попутчика</li>
                       <li class="plan-card__item">26 мар &#8212; 29 мар</li>
                     </ul>
-                    <button class="plan-card__button button" type="button">Изменить</button>
+                    <a class="plan-card__button" href="edit-plan.html">Изменить</a>
                   </div>
                 </div>
               </li>
@@ -265,7 +279,7 @@
                       <li class="plan-card__item">1 попутчик</li>
                       <li class="plan-card__item">1 июл — 15 июл</li>
                     </ul>
-                    <button class="plan-card__button button" type="button">Изменить</button>
+                    <a class="plan-card__button" href="edit-plan.html">Изменить</a>
                   </div>
                 </div>
               </li>
@@ -327,7 +341,7 @@
                         <use xlink:href="img/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <input class="input-number__input" type="number" name="number-days" value="2">
+                    <input class="input-number__input" type="number" name="quantity-companions" value="2">
                     <button class="input-number__btn button" type="button" aria-label="Добавить попутчика.">
                       <svg class="input-number__icon input-number__icon--plus">
                         <use xlink:href="img/sprite.svg#plus"></use>
@@ -346,7 +360,7 @@
                         <use xlink:href="img/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <input class="input-number__input" type="number" name="number-days" value="3">
+                    <input class="input-number__input" type="number" name="quantity-days" value="3">
                     <button class="input-number__btn button" type="button">
                       <svg class="input-number__icon input-number__icon--plus" aria-label="Добавить день.">
                         <use xlink:href="img/sprite.svg#plus"></use>
@@ -611,7 +625,7 @@
 
                     <li class="field-country__item field-country__item--choice">
                       <!-- field-country__control--open -->
-                      <div class="field-country__control field-country__control--open">
+                      <div class="field-country__control">
                         <button class="field-country__button button" type="button">Выберите страну</button>
 
                         <div class="field-country__options country-options">
@@ -670,6 +684,51 @@
                         <button class="field-country__button field-country__button--add button" type="button">
                           Добавить страну
                         </button>
+
+                        <div class="field-country__options country-options">
+                          <div class="country-options__grid">
+                            <ul class="country-options__letters">
+                              <li class="country-options__letter country-options__letter--active">А</li>
+                              <li class="country-options__letter">Б</li>
+                              <li class="country-options__letter">В</li>
+                              <li class="country-options__letter">Г</li>
+                              <li class="country-options__letter">Д</li>
+                              <li class="country-options__letter">Е</li>
+                              <li class="country-options__letter">З</li>
+                              <li class="country-options__letter">И</li>
+                              <li class="country-options__letter">К</li>
+                              <li class="country-options__letter">Л</li>
+                              <li class="country-options__letter">М</li>
+                              <li class="country-options__letter">Н</li>
+                              <li class="country-options__letter">О</li>
+                              <li class="country-options__letter">П</li>
+                              <li class="country-options__letter">Р</li>
+                              <li class="country-options__letter">С</li>
+                              <li class="country-options__letter">Т</li>
+                              <li class="country-options__letter">У</li>
+                              <li class="country-options__letter">Ф</li>
+                              <li class="country-options__letter">Х</li>
+                              <li class="country-options__letter">Ч</li>
+                              <li class="country-options__letter">Ш</li>
+                              <li class="country-options__letter">Э</li>
+                              <li class="country-options__letter">Ю</li>
+                              <li class="country-options__letter">Я</li>
+                            </ul>
+                            <ul class="country-options__countrys">
+                              <li class="country-options__country">Австралия</li>
+                              <li class="country-options__country">Австрия</li>
+                              <li class="country-options__country">Азербайджан</li>
+                              <li class="country-options__country">Албания</li>
+                              <li class="country-options__country">Алжир</li>
+                              <li class="country-options__country">Ангола</li>
+                              <li class="country-options__country">Андорра</li>
+                              <li class="country-options__country">Антигуа и Барбуда</li>
+                              <li class="country-options__country">Аргентина</li>
+                              <li class="country-options__country">Армения</li>
+                              <li class="country-options__country">Афганистан</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
 
                     </li>
@@ -773,7 +832,7 @@
           </div>
 
           <div class="footer__creator creator">
-            <a class="creator__link" href="https://htmlacademy.ru" target="_blank">
+            <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               <p class="creator__text">Разработано</p>
               <img class="creator__icon" src="img/htmlacademy.svg" alt="htmlacademy" width="50">
             </a>

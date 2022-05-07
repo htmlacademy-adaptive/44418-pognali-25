@@ -51,6 +51,14 @@
     }
   }
 
+  &:not(.companions-filter__fieldset--open) {
+    .companions-filter__wrap {
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 106px 1fr;
@@ -156,14 +164,6 @@
       display: flex;
       margin-top: 4px;
       margin-bottom: 30px;
-    }
-  }
-
-  &:not(.companions-filter__fieldset--open) {
-    .companions-filter__wrap {
-      @media (min-width: @desktop-width) {
-        display: none;
-      }
     }
   }
 
